@@ -1,0 +1,70 @@
+$orange-900: #ff6838;
+$orange-400: #fff2ed;
+
+$default-color: #31352b;
+$title-color: #363853;
+$dark: #31352b;
+$gray: #c2c2c2;
+$silver-200: #ececec;
+$white: #ffffff;
+$silver-100: #f9faff;
+$grayrgba: rgba(249, 250, 255, 0.2);
+
+$burgerWidth: 40px;
+$burgerHeight: 25px;
+$burgerLineHeight: 2px;
+$burgerColor: $default-color;
+
+$orange-btn: invert(61%) sepia(34%) saturate(6424%) hue-rotate(336deg) brightness(100%) contrast(104%);
+
+$dark-filter: invert(15%) sepia(36%) saturate(222%) hue-rotate(42deg) brightness(100%) contrast(89%);
+
+$white-filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(97deg) brightness(102%) contrast(107%);
+$gray-flter: invert(84%) sepia(10%) saturate(4%) hue-rotate(319deg) brightness(92%) contrast(91%);
+
+:root {
+  --container-width: 1200px;
+  --white: $white;
+  --orange900: #ff6838;
+  --default-color: #31352b;
+
+  // btn properties
+  --box-shadow-orange: 0px 0px 0px 2px rgba(255, 104, 56, 0.70),
+    0px 5px 12px 0px rgba(255, 104, 56, 0.20);
+
+  --box-shadow-btn: 0 0 0 2px rgba(255, 104, 56, 0.70);
+
+  --background-color-btn: rgba(255, 122, 80, 0.10);
+
+}
+
+.hero-content {
+  --title-color: $title-color;
+}
+
+.restaurants {
+  --box-shadow-btn: 0 0 0 2px rgba(255, 104, 56, 0.7),
+    0 5px 12px 0 rgba(255, 104, 56, 0.2);
+}
+
+
+
+%rubik {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+}
+
+%rubik {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+}
+
+%rubik {
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+}
+
+%rubik {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+}
