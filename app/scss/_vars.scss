@@ -20,7 +20,15 @@ $orange-btn: invert(61%) sepia(34%) saturate(6424%) hue-rotate(336deg) brightnes
 $dark-filter: invert(15%) sepia(36%) saturate(222%) hue-rotate(42deg) brightness(100%) contrast(89%);
 
 $white-filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(97deg) brightness(102%) contrast(107%);
+
 $gray-flter: invert(84%) sepia(10%) saturate(4%) hue-rotate(319deg) brightness(92%) contrast(91%);
+
+$box-shadow-orange: 0px 0px 0px 2px rgba(255, 104, 56, 0.70),
+0px 5px 12px 0px rgba(255, 104, 56, 0.20);
+
+$box-shadow-btn: 0 0 0 2px rgba(255, 104, 56, 0.70);
+
+$background-color-btn: rgba(255, 122, 80, 0.10);
 
 :root {
   --container-width: 1200px;
@@ -36,6 +44,7 @@ $gray-flter: invert(84%) sepia(10%) saturate(4%) hue-rotate(319deg) brightness(9
 
   --background-color-btn: rgba(255, 122, 80, 0.10);
 
+  --white-filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(97deg) brightness(102%) contrast(107%);
 }
 
 .hero-content {

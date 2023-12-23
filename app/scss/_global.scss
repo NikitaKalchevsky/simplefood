@@ -42,24 +42,23 @@ body {
   font-size: 18px;
   letter-spacing: 0.54px;
   border-radius: 5px;
-
   transition: box-shadow 0.4s,
     background-color 0.4s ease-in-out;
 
   &:hover {
-    box-shadow: var(--box-shadow-orange);
-    background-color: var(--white);
+    box-shadow: $box-shadow-orange;
+    background-color: $white;
     color: $orange-900;
   }
 
   &:focus {
-    box-shadow: var(--box-shadow-orange);
-    background-color: var(--background-color-btn);
+    box-shadow: $box-shadow-orange;
+    background-color: $background-color-btn;
     color: $orange-900;
   }
 
   &:active {
-    background-color: var(--background-color-btn);
+    background-color: $background-color-btn;
     color: $orange-900;
     box-shadow: none;
   }
@@ -79,7 +78,7 @@ body {
   }
 
   &:focus {
-    box-shadow: var(--box-shadow-orange);
+    box-shadow: $box-shadow-orange;
     text-decoration-line: none;
   }
 
