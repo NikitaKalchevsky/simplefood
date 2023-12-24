@@ -16,16 +16,11 @@
   align-items: center;
 }
 
-
-
 @mixin pseudo($display: block, $pos: absolute, $content: '') {
   content: $content;
   display: $display;
   position: $pos;
 }
-
-// Использование миксина без аргументов
-
 
 $breakpoints: ("phone": 560px,
   "tablet": 768px,

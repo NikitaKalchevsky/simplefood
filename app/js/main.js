@@ -27,36 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// const swiperReviews = new Swiper(".reviews__slider", {
-//   direction: "horizontal",
-//   speed: 700,
-//   navigation: {
-//     nextEl: ".swiper-button-right",
-//     prevEl: ".swiper-button-left",
-//   },
-
-//   pagination: {
-//     el: ".swiper-pagination",
-//     clickable: true,
-//   },
-//   keyboard: {
-//     enabled: true,
-//   },
-// });
-
-// const restaurantsSwiper = new Swiper(".restaurants-swiper", {
-//   direction: "horizontal",
-//   slidesPerView: 1,
-//   speed: 400,
-//   pagination: {
-//     el: ".swiper-pagination-3",
-//     clickable: true,
-//   },
-//   keyboard: {
-//     enabled: true,
-//   },
-// });
-
 window.addEventListener("DOMContentLoaded", () => {
   const resizableSwiper = (
     breakpoint,
@@ -114,7 +84,7 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  resizableSwiper("(max-width: 1200px)", ".restaurants-swiper", {
+  resizableSwiper("(max-width: 768px)", ".restaurants-swiper", {
     slidesPerView: 1,
     spaceBetween: 0,
     direction: "horizontal",

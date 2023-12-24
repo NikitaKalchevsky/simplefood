@@ -16,18 +16,13 @@
 
 </head>
 
-
-
 <body>
   <header class="header">
     <div class="container">
       <div class="header__container" id="navbar">
 
         <div class="menu">
-
-
           <div class="menu__border">
-
           </div>
           <ul class="menu__list">
             <li class="menu__item active">
@@ -46,8 +41,8 @@
               </a>
             </li>
           </ul>
-
-
+          <div class="menu__border">
+          </div>
           <div class="social">
             <ul class="social-adress__list">
               <li class="social-adress__item">
@@ -120,7 +115,7 @@
             <img class="logo__img" src="images/logo.svg" alt="логотип" width="200" height="39">
           </a>
 
-          <div class="navigation">
+          <div class="menu-haeder__navigation">
 
             <ul class="menu-header__list">
               <li class="menu-header__item">
@@ -167,10 +162,8 @@
             </button>
           </div>
         </nav>
-
       </div>
     </div>
-
   </header>
 
   <main class="main ">
@@ -199,9 +192,9 @@
             </a>
           </div>
         </div>
+
         <div class="hero-content__image" style="background-image: url('images/scooter_guy.png');">
         </div>
-
       </section>
     </div>
 
@@ -449,11 +442,6 @@
       </div>
     </section>
 
-
-
-
-
-
     <section class="restaurants section">
       <div class="container">
         <h2 class="title restaurants__title">
@@ -465,7 +453,7 @@
 
             <ul class="restaurants-category swiper-wrapper">
 
-              <li class="restaurants-category__list swiper-slide slider__item">
+              <li class="restaurants-category__list swiper-slide">
                 <article class="restaurants-cards">
                   <img class="restaurants-cards__img" src="images/restaurants/blaze_pizza.jpg" alt="фото пиццы"
                     width="370" height="300">
@@ -489,7 +477,7 @@
                 </article>
               </li>
 
-              <li class="restaurants-category__list swiper-slide slider__item">
+              <li class="restaurants-category__list swiper-slide">
                 <article class="restaurants-cards">
                   <img class="restaurants-cards-img" src="images/restaurants/pizza_runcho.jpg" alt="Pizza Runcho"
                     width="370" height="300">
@@ -513,7 +501,7 @@
 
               </li>
 
-              <li class="restaurants-category__list swiper-slide slider__item">
+              <li class="restaurants-category__list swiper-slide">
                 <article class="restaurants-cards">
                   <img class="restaurants-cards__img" src="images/restaurants/pizza_hut.jpg" alt="Pizza Hut" width="370"
                     height="300">
@@ -537,7 +525,7 @@
 
               </li>
 
-              <li class="restaurants-category__list swiper-slide slider__item">
+              <li class="restaurants-category__list swiper-slide">
                 <article class="restaurants-cards">
                   <img class="restaurants-cards__img" src="images/restaurants/mcdonalds.jpg" alt="McDonald`s"
                     width="370" height="300">
@@ -561,7 +549,7 @@
 
               </li>
 
-              <li class="restaurants-category__list swiper-slide slider__item">
+              <li class="restaurants-category__list swiper-slide">
                 <article class="restaurants-cards">
                   <img class="restaurants-cards__img" src="images/restaurants/kfc.jpg" alt="KFC" width="370"
                     height="300">
@@ -584,7 +572,7 @@
                 </article>
 
               </li>
-              <li class="restaurants-category__list swiper-slide slider__item">
+              <li class="restaurants-category__list swiper-slide">
                 <article class="restaurants-cards">
                   <img class="restaurants-cards__img" src="images/restaurants/star_burgers.jpg" alt="Star Burgers"
                     width="370" height="300">
@@ -624,9 +612,8 @@
           Отзывы клиентов
         </h2>
         <div class="reviews__slider swiper">
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide">
               <figure class="reviews__box">
                 <img class="reviews__img" src="images/client.jpg" alt="фото клиента" width="300" height="300">
                 <blockquote class="reviews__inner">
@@ -645,9 +632,9 @@
                   </span>
                 </blockquote>
               </figure>
-            </div>
+            </li>
 
-            <div class="swiper-slide">
+            <li class="swiper-slide">
               <figure class="reviews__box">
                 <img class="reviews__img" src="images/client.jpg" alt="фото клиента" width="300" height="300">
                 <blockquote class="reviews__inner">
@@ -666,9 +653,9 @@
                   </span>
                 </blockquote>
               </figure>
-            </div>
+            </li>
 
-            <div class="swiper-slide">
+            <li class="swiper-slide">
               <figure class="reviews__box">
                 <img class="reviews__img" src="images/client.jpg" alt="фото клиента" width="300" height="300">
                 <blockquote class="reviews__inner">
@@ -687,9 +674,9 @@
                   </span>
                 </blockquote>
               </figure>
-            </div>
+            </li>
 
-            <div class="swiper-slide">
+            <li class="swiper-slide">
               <figure class="reviews__box">
                 <img class="reviews__img" src="images/client.jpg" alt="фото клиента" width="300" height="300">
                 <blockquote class="reviews__inner">
@@ -709,30 +696,24 @@
                 </blockquote>
 
               </figure>
-            </div>
-          </div>
+            </li>
+          </ul>
           <div class="reviews__button-swiper">
 
-
             <button class="reviews__button swiper-button-right">
-              <svg class="">
+              <svg>
                 <use xlink:href="images/sprite.svg#vector"></use>
               </svg>
-
             </button>
             <button class="reviews__button swiper-button-left">
-              <svg class="">
+              <svg>
                 <use xlink:href="images/sprite.svg#vector"></use>
               </svg>
             </button>
-
             <div class="reviews-pag">
               <div class="swiper-pagination "></div>
             </div>
-
           </div>
-
-
         </div>
 
       </div>
@@ -755,8 +736,8 @@
                 <a class="connect__link" href="#" target="_blank" rel=”noreferrer”>
                   <img src="images/app_store.svg" width="120" height="40" alt="ссылка на эппл стор">
                 </a>
-              </li class="connect__item">
-              <li>
+              </li>
+              <li class="connect__item">
                 <a class="connect__link" href="#" target="_blank" rel=”noreferrer”>
                   <img src="images/google_play.svg" width="120" height="40" alt="ссылка на гугл плей">
                 </a>

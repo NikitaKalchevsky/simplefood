@@ -45,6 +45,11 @@ body {
   transition: box-shadow 0.4s,
     background-color 0.4s ease-in-out;
 
+  @include mq("desktop") {
+    padding: 8px 24px;
+    font-size: 14px;
+  }
+
   &:hover {
     box-shadow: $box-shadow-orange;
     background-color: $white;
