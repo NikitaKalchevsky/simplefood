@@ -1198,6 +1198,8 @@
     @include mq ("tablet") {
       flex-direction: column;
       align-content: flex-start;
+      max-width: 768px;
+      align-items: flex-start;
     }
   }
 
@@ -1217,6 +1219,7 @@
     @include mq ("tablet") {
       grid-template-columns: repeat(1, 1fr);
       margin-right: 0;
+      width: 100%;
     }
   }
 
