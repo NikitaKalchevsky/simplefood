@@ -157,6 +157,7 @@
     text-decoration: none;
     display: block;
     width: 100%;
+
   }
 
   &__border {
@@ -478,7 +479,7 @@
   }
 
   &__item:not(:last-child) {
-    margin-right: 20px;
+    margin-right: 10px;
   }
 }
 
@@ -945,16 +946,16 @@
     bottom: 16px;
 
     @include mq ("desktop") {
-      bottom: 470px;
+      bottom: 500px;
       transform: translateX(180px);
     }
 
     @include mq ("tablet") {
-      bottom: 423px;
+      bottom: 450px;
     }
 
     @include mq ("phone") {
-      bottom: 360px;
+      bottom: 400px;
       transform: translateX(100px);
     }
   }
@@ -974,16 +975,16 @@
     }
 
     @include mq ("desktop") {
-      bottom: 470px;
+      bottom: 500px;
       transform: translateX(-180px);
     }
 
     @include mq ("tablet") {
-      bottom: 423px;
+      bottom: 450px;
     }
 
     @include mq ("phone") {
-      bottom: 360px;
+      bottom: 400px;
       transform: translateX(-100px);
     }
   }
@@ -1040,7 +1041,7 @@
     display: flex;
     justify-content: left;
     min-width: 0;
-    margin-bottom: 70px;
+    margin-bottom: 100px;
 
     @include mq ("desktop") {
       flex-direction: column;
@@ -1049,7 +1050,7 @@
   }
 
   &__title {
-    margin-bottom: clamp(1.875rem, 0.83rem + 5.23vw, 4.75rem);
+    margin-bottom: 44px;
     text-align: center;
   }
 
