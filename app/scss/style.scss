@@ -97,10 +97,8 @@
 .menu.menu--active {
   @include mq("desktop") {
     display: block;
-    transform: translateX(-17%);
+    transform: translateX(-14%);
     font-size: 30px;
-    padding-left: 102px;
-    padding-top: 30px;
   }
 }
 
@@ -117,7 +115,8 @@
     display: block;
     transform: translateX(-200%);
     transition: all 0.4s;
-    padding-top: 135px;
+    padding-top: 6%;
+    padding-left: 17%;
     width: 100vw;
     height: 100vh;
   }
@@ -126,6 +125,7 @@
     display: flex;
     justify-content: space-between;
     padding-right: 26px;
+    padding-bottom: 20px;
   }
 
   &__item:not(:last-child) {
