@@ -5,9 +5,34 @@ const concat = require("gulp-concat");
 const uglify = require("gulp-uglify-es").default;
 const imagemin = require("gulp-imagemin");
 const del = require("del");
+const fileInclude = require("gulp-file-include");
 const browserSync = require("browser-sync").create();
 const svgSprite = require("gulp-svg-sprite");
 const autoprefixer = require("gulp-autoprefixer");
+
+const htmlInclude = () => {
+  return src(["app/html/*.html"]) // Находит любой .html файл в папке "html", куда будем подключать другие .html файлы
+    .pipe(
+      fileInclude({
+        prefix: "@",
+        basepath: "@file",
+      })
+    )
+    .pipe(dest("app")) // указываем, в какую папку поместить готовый файл html
+    .pipe(browserSync.stream());
+};
+
+// function pages() {
+//   return src("app/pages/*.html")
+//     .pipe(
+//       include({
+//         includePaths: "app/components",
+//       })
+//     )
+//     .pipe(dest("app"))
+//     .pipe(browserSync.stream());
+// }
+
 function scripts() {
   return src([
     "node_modules/jquery/dist/jquery.js",
@@ -77,10 +102,12 @@ function watching() {
     notify: false,
   });
   watch(["app/scss/**/*.scss"], styles);
+  watch(["app/html/**/*.html"], htmlInclude);
   watch(["app/js/**/*.js", "!app/js/main.min.js"], scripts);
   watch(["app/**/*.html"]).on("change", browserSync.reload);
 }
 
+exports.htmlInclude = htmlInclude;
 exports.styles = styles;
 exports.scripts = scripts;
 exports.watching = watching;
@@ -89,4 +116,4 @@ exports.images = images;
 exports.cleanDist = cleanDist;
 exports.build = series(cleanDist, images, build);
 
-exports.default = parallel(styles, scripts, svgSprites, watching);
+exports.default = parallel(styles, scripts, svgSprites, htmlInclude, watching);
