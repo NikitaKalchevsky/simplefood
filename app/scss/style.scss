@@ -42,7 +42,7 @@
   border-radius: 5px;
   transition: opacity 0.4s,
     box-shadow 0.4s ease-in-out;
-  z-index: 2;
+
 
   @include mq("desktop") {}
 
@@ -68,6 +68,21 @@
   overflow: hidden
 }
 
+.lock {
+  overflow: hidden;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
 .burger {
   display: block;
 
@@ -82,10 +97,10 @@
 .menu.menu--active {
   @include mq("desktop") {
     display: block;
-    transform: translateX(0%);
+    transform: translateX(-17%);
     font-size: 30px;
-    padding-left: 15px;
-    padding-top: 100px;
+    padding-left: 102px;
+    padding-top: 30px;
   }
 }
 
@@ -105,6 +120,12 @@
     padding-top: 135px;
     width: 100vw;
     height: 100vh;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 26px;
   }
 
   &__item:not(:last-child) {

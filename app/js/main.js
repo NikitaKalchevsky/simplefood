@@ -7,24 +7,35 @@ window.addEventListener("scroll", function () {
     headerEl.classList.remove("header-menu");
   }
 });
+
 document.addEventListener("DOMContentLoaded", () => {
   //Mobile Menu
   const burger = document.querySelector(".burger");
   const mobileMenu = document.querySelector(".menu");
-
+  const menuTopImg = document.querySelector(".menu__top-img");
   const bodyLock = document.querySelector("body");
 
   burger.addEventListener("click", () => {
     mobileMenu.classList.toggle("menu--active");
     if (mobileMenu.classList.contains("menu--active")) {
-      burger.classList.add("burger--active");
-
       bodyLock.classList.add("lock");
     } else {
-      burger.classList.remove("burger--active");
       bodyLock.classList.remove("lock");
     }
   });
+
+  menuTopImg.addEventListener("click", () => {
+    mobileMenu.classList.remove("menu--active");
+    bodyLock.classList.remove("lock");
+  });
+});
+
+document.addEventListener("click", function (e) {
+  if (e.target !== burger && e.target !== mobileMenu) {
+    burger.classList.remove("burger--active");
+    mobileMenu.classList.remove("menu--active");
+    bodyLock.classList.remove("lock");
+  }
 });
 
 window.addEventListener("DOMContentLoaded", () => {

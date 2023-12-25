@@ -94,22 +94,5 @@ $breakpoints: ("phone": 560px,
     top: calc(100% - $burgerLineHeight);
   }
 
-  &--active {
-    .burger__line {
-      transform: scale(0);
-      transition: transform 0.3s ease-in-out;
-    }
 
-    &::before {
-      transform: rotate(45deg);
-      top: 50%;
-      transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
-    }
-
-    &::after {
-      transform: rotate(-45deg);
-      top: 50%;
-      transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
-    }
-  }
 }
