@@ -30,9 +30,7 @@
             <span class="burger-close__line"></span>
           </button>
         </div>
-
         <ul class="menu__list">
-          <div class="menu__list-border"></div>
           <li class="menu__item active">
             <a class="menu__link button-secondary active" href="#">
               Главная
@@ -52,39 +50,39 @@
         <div class="menu__border">
         </div>
         <div class="social">
-          <ul class="social-adress__list">
-            <li class="social-adress__item">
-              <svg class="social-adress__img">
+          <ul class="social__list">
+            <li class="social__item">
+              <svg class="social__img">
                 <use xlink:href="images/sprite.svg#location"></use>
               </svg>
-              <a class="social-adress__link button-secondary" href="#">
+              <a class="social__link button-secondary" href="#">
                 ул. Т.Г.Шевченко, 1
               </a>
             </li>
 
-            <li class="social-adress__item">
-              <svg class="social-adress__img">
+            <li class="social__item">
+              <svg class="social__img">
                 <use xlink:href="images/sprite.svg#calling"></use>
               </svg>
-              <a class="social-adress__link button-secondary" href="tel:+380501112233">
+              <a class="social__link button-secondary" href="tel:+380501112233">
                 380501112233
               </a>
             </li>
 
-            <li class="social-adress__item">
-              <svg class="social-adress__img">
+            <li class="social__item">
+              <svg class="social__img">
                 <use xlink:href="images/sprite.svg#message"></use>
               </svg>
-              <a class="social-adress__link button-secondary" href="mailto:support@sfood.com">
+              <a class="social__link button-secondary" href="mailto:support@sfood.com">
                 support@sfood.com
               </a>
             </li>
           </ul>
 
-          <ul class="social-image__items">
-            <li class="social-image__item">
-              <a class="social-image__link" href="#" target="_blank" rel=”noreferrer”>
-                <svg class="social-image__img">
+          <ul class="social__items">
+            <li class="social__elem">
+              <a class="social__elem-link" href="#" target="_blank" rel=”noreferrer”>
+                <svg>
                   <use xlink:href="images/sprite.svg#facebook"></use>
                 </svg>
                 <span class="sr-only">
@@ -93,9 +91,9 @@
               </a>
             </li>
 
-            <li class="social-image__item">
-              <a class="social-image__link" href="#" target="_blank" rel=”noreferrer”>
-                <svg class="social-image__img">
+            <li class="social__elem">
+              <a class="social__elem-link" href="#" target="_blank" rel=”noreferrer”>
+                <svg>
                   <use xlink:href="images/sprite.svg#twitter"></use>
                 </svg>
                 <span class="sr-only">
@@ -104,9 +102,9 @@
               </a>
             </li>
 
-            <li class="social-image__item">
-              <a class="social-image__link" href="#" target="_blank" rel=”noreferrer”>
-                <svg class="social-image__img">
+            <li class="social__elem">
+              <a class="social__elem-link" href="#" target="_blank" rel=”noreferrer”>
+                <svg>
                   <use xlink:href="images/sprite.svg#instagram"></use>
                 </svg>
                 <span class="sr-only">
@@ -122,7 +120,7 @@
         <a class="logo" href="#">
           <img class="logo__img" src="images/logo.svg" alt="логотип" width="200" height="39">
         </a>
-        <div class="menu-haeder__navigation">
+        <div class="menu-header__navigation">
           <ul class="menu-header__list">
             <li class="menu-header__item">
               <a class="menu-header__link button-secondary active" href="#">
@@ -176,36 +174,37 @@
 <main class="main ">
 
 
-  <div class="container">
-
   <section class="hero-content section">
-    <div class="hero-content__inner">
-      <h1 class="sr-only">
-        Интернет магазин еды Simple Food
-      </h1>
-      <h2 class="hero-content__title">
-        Доставка
-        <span class="hero-content__subtitle">
-          за 15 минут
-        </span>
-      </h2>
-      <p class="hero-content__text">
-        Самый быстрый сервис доставки еды в вашем городе. Не уложимся в срок - доставка за наш счёт
-      </p>
-      <div class="hero-content__button">
-        <a class="button-accent" href="#">
-          Заказать
-        </a>
-        <a class="button-secondary" href="#">
-          Подробнее
-        </a>
+  <div class="container">
+    <div class="hero-content__box">
+      <div class="hero-content__inner">
+        <h1 class="sr-only">
+          Интернет магазин еды Simple Food
+        </h1>
+        <h2 class="hero-content__title">
+          Доставка
+          <span class="hero-content__subtitle">
+            за 15 минут
+          </span>
+        </h2>
+        <p class="hero-content__text">
+          Самый быстрый сервис доставки еды в вашем городе. Не уложимся в срок - доставка за наш счёт
+        </p>
+        <div class="hero-content__button">
+          <a class="button-accent" href="#">
+            Заказать
+          </a>
+          <a class="button-secondary" href="#">
+            Подробнее
+          </a>
+        </div>
       </div>
-    </div>
-    <div class="hero-content__image" style="background-image: url('images/scooter_guy.svg');">
-    </div>
+      <div class="hero-content__image" style="background-image: url('images/scooter_guy.svg');">
+      </div>
 
-  </section>
-</div>
+    </div>
+  </div>
+</section>
   <section class="product-hero section">
   <div class="container">
     <h2 class="title product-hero__title">
@@ -257,7 +256,7 @@
       </li>
     </ul>
 
-    <ul class="popular-category__list">
+    <ul class="popular-category">
       <li class="popular-category__elem category-b">
         <article class="product-card">
           <img class="product-card__img" src="images/burgers/1.jpg" alt="Чизбургер с листьями салата" width="140"
@@ -292,7 +291,7 @@
       <li class="popular-category__elem mix category-c">
         <article class="product-card">
 
-          <img class="product-burger-card__img" src="images/burgers/3.jpg" alt="Королевский чизбургер" width="140"
+          <img class="product-card__img" src="images/burgers/3.jpg" alt="Королевский чизбургер" width="140"
             height="140">
           <h3 class="product-card__text">
             Королевский чизбургер
@@ -472,7 +471,7 @@
                   <time class="restaurants-cards__time" datetime="2023-12-07T11:00">
                     11:00 - 22:00
                   </time>
-                  <a class="restaurants-cards__btn" href="#">
+                  <a class="restaurants-cards__btn button-accent" href="#">
                     <svg>
                       <use xlink:href="images/sprite.svg#arrow_right"></use>
                     </svg>
@@ -496,7 +495,7 @@
                   <time class="restaurants-cards__time" datetime="2023-12-07T11:00">
                     12:00 - 21:00
                   </time>
-                  <a class="restaurants-cards__btn" href="#">
+                  <a class="restaurants-cards__btn button-accent" href="#">
                     <svg>
                       <use xlink:href="images/sprite.svg#arrow_right"></use>
                     </svg>
@@ -520,7 +519,7 @@
                   <time class="restaurants-cards__time" datetime="2023-12-07T11:00">
                     06:00 - 23:00
                   </time>
-                  <a class="restaurants-cards__btn" href="#">
+                  <a class="restaurants-cards__btn button-accent" href="#">
                     <svg>
                       <use xlink:href="images/sprite.svg#arrow_right"></use>
                     </svg>
@@ -544,7 +543,7 @@
                   <time class="restaurants-cards__time" datetime="2023-12-07T11:00">
                     06:00 - 23:30
                   </time>
-                  <a class="restaurants-cards__btn" href="#">
+                  <a class="restaurants-cards__btn button-accent" href="#">
                     <svg>
                       <use xlink:href="images/sprite.svg#arrow_right"></use>
                     </svg>
@@ -567,7 +566,7 @@
                   <time class="restaurants-cards__time" datetime="2023-12-07T11:00">
                     06:00 - 23:30
                   </time>
-                  <a class="restaurants-cards__btn" href="#">
+                  <a class="restaurants-cards__btn button-accent" href="#">
                     <svg>
                       <use xlink:href="images/sprite.svg#arrow_right"></use>
                     </svg>
@@ -590,7 +589,7 @@
                   <time class="restaurants-cards__time" datetime="2023-12-07T11:00">
                     09:00 - 21:00
                   </time>
-                  <a class="restaurants-cards__btn" href="#">
+                  <a class="restaurants-cards__btn button-accent" href="#">
                     <svg>
                       <use xlink:href="images/sprite.svg#arrow_right"></use>
                     </svg>
@@ -601,8 +600,8 @@
           </li>
         </ul>
 
-        <div class="swiper-pag">
-          <div class="swiper-pag__bullet swiper-pagination-3"></div>
+        <div class="restaurants__pagination">
+          <div class="swiper-pagination-3"></div>
         </div>
       </div>
     </div>
@@ -713,7 +712,7 @@
             <use xlink:href="images/sprite.svg#vector"></use>
           </svg>
         </button>
-        <div class="reviews-pag">
+        <div class="reviews__pagination">
           <div class="swiper-pagination "></div>
         </div>
       </div>
@@ -807,14 +806,14 @@
           <a class="footer__item-link button-secondary" href="#">
             О нас
           </a>
-
+        </li>
         <li class="footer__item ">
           <a class="footer__item-link button-secondary" href="#">
             Новости
           </a>
 
         </li>
-        </li>
+
         <li class="footer__item ">
           <a class="footer__item-link button-secondary" href="#">
             Партнеры
@@ -853,39 +852,39 @@
       </ul>
 
       <div class="social">
-        <ul class="social-adress__list">
-          <li class="social-adress__item">
-            <svg class="social-adress__img">
+        <ul class="social__list">
+          <li class="social__item">
+            <svg class="social__img">
               <use xlink:href="images/sprite.svg#location"></use>
             </svg>
-            <a class="social-adress__link button-secondary" href="#">
+            <a class="social__link button-secondary" href="#">
               ул. Т.Г.Шевченко, 1
             </a>
           </li>
 
-          <li class="social-adress__item">
-            <svg class="social-adress__img">
+          <li class="social__item">
+            <svg class="social__img">
               <use xlink:href="images/sprite.svg#calling"></use>
             </svg>
-            <a class="social-adress__link button-secondary" href="tel:+380501112233">
+            <a class="social__link button-secondary" href="tel:+380501112233">
               380501112233
             </a>
           </li>
 
-          <li class="social-adress__item">
-            <svg class="social-adress__img">
+          <li class="social__item">
+            <svg class="social__img">
               <use xlink:href="images/sprite.svg#message"></use>
             </svg>
-            <a class="social-adress__link button-secondary" href="mailto:support@sfood.com">
+            <a class="social__link button-secondary" href="mailto:support@sfood.com">
               support@sfood.com
             </a>
           </li>
         </ul>
 
-        <ul class="social-image__items">
-          <li class="social-image__item">
-            <a class="social-image__link" href="#" target="_blank" rel=”noreferrer”>
-              <svg class="social-image__img">
+        <ul class="social__items">
+          <li class="social__elem">
+            <a class="social__elem-link" href="#" target="_blank" rel=”noreferrer”>
+              <svg>
                 <use xlink:href="images/sprite.svg#facebook"></use>
               </svg>
               <span class="sr-only">
@@ -894,9 +893,9 @@
             </a>
           </li>
 
-          <li class="social-image__item">
-            <a class="social-image__link" href="#" target="_blank" rel=”noreferrer”>
-              <svg class="social-image__img">
+          <li class="social__elem">
+            <a class="social__elem-link" href="#" target="_blank" rel=”noreferrer”>
+              <svg>
                 <use xlink:href="images/sprite.svg#twitter"></use>
               </svg>
               <span class="sr-only">
@@ -905,9 +904,9 @@
             </a>
           </li>
 
-          <li class="social-image__item">
-            <a class="social-image__link" href="#" target="_blank" rel=”noreferrer”>
-              <svg class="social-image__img">
+          <li class="social__elem">
+            <a class="social__elem-link" href="#" target="_blank" rel=”noreferrer”>
+              <svg>
                 <use xlink:href="images/sprite.svg#instagram"></use>
               </svg>
               <span class="sr-only">
@@ -922,7 +921,7 @@
 
   </div>
 </footer>
-<div class="footer__bottom">
+<div class="footer-bottom">
   <span>
     © 2022 Simple Food
   </span>

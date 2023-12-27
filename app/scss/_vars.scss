@@ -28,6 +28,10 @@ $white-filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(97deg) brightnes
 
 $gray-flter: invert(84%) sepia(10%) saturate(4%) hue-rotate(319deg) brightness(92%) contrast(91%);
 
+$box-shadow-border:0 0 0 1px rgba(255, 104, 56, 0.70),
+0 5px 12px 0 rgba(255, 104, 56, 0.20);
+
+
 $box-shadow-orange: 0px 0px 0px 2px rgba(255, 104, 56, 0.70),
 0px 5px 12px 0px rgba(255, 104, 56, 0.20);
 

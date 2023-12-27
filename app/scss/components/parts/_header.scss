@@ -77,10 +77,11 @@
   height: 44px;
   border: none;
   position: relative;
-  display: block;
+  display: none;
 
   @include mq("desktop") {
     z-index: 2;
+    display: block;
     margin-left: 20px;
   }
 
@@ -190,7 +191,6 @@
     }
   }
 
-
   .burger-close {
     position: relative;
     background-color: $title-color;
@@ -228,8 +228,6 @@
     }
   }
 
-
-
   .active {
     color: $orange-900;
   }
@@ -260,12 +258,14 @@
     font-size: 18px;
     text-decoration: none;
   }
+
+  &__navigation {
+    display: flex;
+    justify-content: space-between;
+  }
+
 }
 
-.menu-haeder__navigation {
-  display: flex;
-  justify-content: space-between;
-}
 
 .nav {
   display: flex;

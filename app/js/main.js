@@ -99,7 +99,7 @@ window.addEventListener("DOMContentLoaded", () => {
     direction: "horizontal",
     speed: 700,
     pagination: {
-      el: ".swiper-pag",
+      el: ".restaurants__pagination",
       clickable: true,
     },
     breakpoints: {
@@ -123,4 +123,4 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-var mixer = mixitup(".popular-category__list");
+var mixer = mixitup(".popular-category");

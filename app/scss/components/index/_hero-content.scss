@@ -1,10 +1,11 @@
 .hero-content {
-  position: relative;
-  padding-top: clamp(6.25rem, 4.886rem + 6.82vw, 10rem);
-  @include flex-space-betwen;
+  &__box {
+    @include flex-space-betwen;
+    padding-top: clamp(6.25rem, 4.886rem + 6.82vw, 10rem);
 
-  @include mq("phone") {
-    align-items: flex-start;
+    @include mq("phone") {
+      align-items: flex-start;
+    }
   }
 
   &__inner {

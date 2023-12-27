@@ -1,12 +1,12 @@
-.reviews-pag {
-  @include mq ("tablet-2") {
-    display: none;
-  }
-}
-
 .reviews {
   @include mq ("tablet-2") {
     padding-bottom: 0;
+  }
+
+  &__pagination {
+    @include mq ("tablet-2") {
+      display: none;
+    }
   }
 
   .swiper-button-prev:after {

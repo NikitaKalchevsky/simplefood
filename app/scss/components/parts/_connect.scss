@@ -20,12 +20,15 @@
     @include image-bg;
 
     @include mq ("desktop") {
+      width: 450px;
+      height: 300px;
+    }
+
+    @include mq ("tablet-2") {
       z-index: -1;
       position: absolute;
       right: 0;
       opacity: 0.4;
-      width: 500px;
-      height: 340px;
     }
 
     @include mq ("tablet") {
