@@ -1,0 +1,293 @@
+.reviews-pag {
+  @include mq ("tablet-2") {
+    display: none;
+  }
+}
+
+.reviews {
+  @include mq ("tablet-2") {
+    padding-bottom: 0;
+  }
+
+  .swiper-button-prev:after {
+    position: relative;
+  }
+
+  .swiper-pagination-bullets {
+    position: absolute;
+
+    bottom: 21px;
+    left: 1px;
+
+    span {
+      margin: 0 8px;
+      width: 15px;
+      height: 15px;
+      background-color: $gray;
+      border: 2px solid transparent;
+      box-shadow: 2px;
+      transition: box-shadow 0.4s,
+        background-color 0.4s,
+        opacity 0.4s ease-in-out;
+
+      &:hover {
+        box-shadow: $box-shadow-orange;
+        background-color: $orange-400;
+        opacity: 0.5;
+      }
+
+      &:focus {
+        box-shadow: $box-shadow-orange;
+        background-color: $gray;
+      }
+
+      &:active {
+        background-color: $orange-400;
+      }
+    }
+  }
+
+  .swiper-pagination-bullets .swiper-pagination-bullet-active {
+    background-color: $orange-900;
+    transition: border 0.4s,
+      background-color 0.4s,
+      opacity 0.4s ease-in-out;
+
+    &:hover {
+      box-shadow: $box-shadow-orange;
+      background-color: $orange-400;
+      opacity: 0.5;
+    }
+  }
+
+  .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin-right: 10px;
+  }
+
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    color: $orange-900;
+    font-size: 18px;
+    border: 2px solid $orange-900;
+    padding: 5px 10px;
+    border-radius: 50%;
+  }
+
+  .swiper-button-disabled {
+    border-color: $orange-900;
+
+    svg {
+      filter: $orange-btn;
+    }
+  }
+
+  .swiper-button-right {
+    position: absolute;
+    left: 50%;
+    transform: translateX(72px);
+    bottom: 16px;
+
+    @include mq ("tablet-2") {
+      bottom: 500px;
+      transform: translateX(180px);
+    }
+
+    @include mq ("tablet") {
+      bottom: 450px;
+    }
+
+    @include mq ("phone") {
+      bottom: 360px;
+      transform: translateX(100px);
+    }
+  }
+
+  .swiper-button-left {
+    right: 50%;
+    transform: translateX(-72px);
+    bottom: 16px;
+    position: absolute;
+    transition: border-color 0.4s,
+      opacity 0.4s,
+      background-color 0.4s,
+      box-shadow 0.4s ease-in-out;
+
+    svg {
+      transform: rotate(180deg);
+    }
+
+    @include mq ("tablet-2") {
+      bottom: 500px;
+      transform: translateX(-180px);
+    }
+
+    @include mq ("tablet") {
+      bottom: 450px;
+    }
+
+    @include mq ("phone") {
+      bottom: 360px;
+      transform: translateX(-100px);
+    }
+  }
+
+  &__button {
+    position: relative;
+    display: flex;
+    border: 2px solid $gray;
+    padding: 8px 13px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 2px;
+    cursor: pointer;
+
+    color: $orange-900;
+    z-index: 900;
+
+    svg {
+      filter: $gray-flter;
+      width: 11px;
+      height: 18px;
+    }
+
+    &:hover {
+      opacity: 0.5;
+      border-color: $orange-900;
+      background-color: $orange-400;
+
+      svg {
+        filter: $orange-btn;
+      }
+    }
+
+    &:focus {
+      border-color: $gray;
+      box-shadow: $orange-900;
+
+      svg {
+        filter: $gray-flter;
+      }
+    }
+
+    &:active {
+      background-color: $orange-400;
+      border-color: transparent;
+
+      svg {
+        filter: $orange-btn;
+      }
+    }
+  }
+
+  &__box {
+    display: flex;
+    justify-content: left;
+    min-width: 0;
+    margin-bottom: 100px;
+
+    @include mq ("tablet-2") {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    margin-bottom: 44px;
+    text-align: center;
+  }
+
+  &__img {
+    border-radius: 50%;
+    max-width: 300px;
+    object-fit: cover;
+    margin-right: 38px;
+    margin-left: 90px;
+
+    @include mq ("desktop") {
+      max-width: 250px;
+      height: 250px;
+    }
+
+    @include mq ("tablet-2") {
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 30px;
+      max-width: 300px;
+      height: 300px;
+    }
+
+    @include mq ("tablet") {
+      max-width: 200px;
+      height: 200px;
+    }
+
+    @include mq ("phone") {
+      max-width: 100px;
+      height: 100px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__feedback {
+    padding: 0 40px;
+    position: relative;
+    max-width: 570px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    font-style: italic;
+    @include line-clamp(5);
+
+    @include mq ("desktop") {
+      font-size: 18px;
+    }
+
+    @include mq ("phone") {
+      font-size: 14px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 24px;
+      height: 20px;
+      bottom: 1px;
+      @include image-bg;
+      background-image: url("../images/quotesdown.svg");
+      right: 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 24px;
+      height: 20px;
+      @include image-bg;
+      background-image: url("../images/quotesdown.svg");
+      transform: scalex(-1);
+      left: 0;
+    }
+  }
+
+  &__name {
+    padding: 0 40px;
+    color: $orange-900;
+    margin-bottom: 15px;
+    font-weight: 500;
+  }
+
+  &__text {
+    padding: 0 40px;
+    font-size: 14px;
+  }
+
+  &__slider {
+    position: relative;
+  }
+}

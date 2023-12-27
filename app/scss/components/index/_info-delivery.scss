@@ -1,0 +1,100 @@
+.info-delivery {
+  &__box {
+    display: flex;
+    padding: 0 70px;
+
+    @include mq("desktop") {
+      align-items: center;
+    }
+  }
+
+  &__photo {
+    margin-right: 120px;
+    max-width: 440px;
+    height: 585px;
+    width: 100%;
+    @include image-bg;
+
+    @include mq("desktop") {
+      margin-right: 30px;
+      max-width: 348px;
+      height: 462px;
+    }
+
+    @include mq("tablet-2") {
+      z-index: -1;
+      opacity: 0.4;
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  &__title {
+    margin-top: 67px;
+    margin-bottom: 30px;
+  }
+
+  &__inner {
+    max-width: 470px;
+  }
+
+  &__description {
+    color: $dark;
+    margin-bottom: 30px;
+    font-size: clamp(0.875rem, 0.739rem + 0.68vw, 1.25rem);
+    font-weight: 400;
+    line-height: 1.5;
+    opacity: 0.9;
+    @include line-clamp(3);
+  }
+
+  &__item {
+    display: flex;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.5;
+    display: flex;
+    @include line-clamp(1);
+
+    @include mq("tablet") {
+      font-size: 18px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 34px;
+      height: 34px;
+      @include image-bg;
+      margin-right: 30px;
+    }
+
+    &--stopwatch::before {
+      background-image: url("../images/sprite.svg#stopwatch_1");
+      filter: $box-shadow-orange;
+    }
+
+    &--delivery::before {
+      background-image: url("../images/sprite.svg#delivery_1");
+      filter: invert(45%) sepia(78%) saturate(2706%) hue-rotate(192deg) brightness(100%) contrast(103%);
+    }
+
+    &--shop::before {
+      background-image: url("../images/sprite.svg#shop_1");
+      filter: invert(43%) sepia(99%) saturate(7445%) hue-rotate(351deg) brightness(99%) contrast(102%);
+    }
+  }
+}

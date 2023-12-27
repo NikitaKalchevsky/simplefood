@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //Mobile Menu
   const burger = document.querySelector(".burger");
   const mobileMenu = document.querySelector(".menu");
-  const menuTopImg = document.querySelector(".menu__top-img");
+  const menuTopImg = document.querySelector(".burger-close");
   const bodyLock = document.querySelector("body");
 
   burger.addEventListener("click", () => {
@@ -28,14 +28,12 @@ document.addEventListener("DOMContentLoaded", () => {
     mobileMenu.classList.remove("menu--active");
     bodyLock.classList.remove("lock");
   });
-});
-
-document.addEventListener("click", function (e) {
-  if (e.target !== burger && e.target !== mobileMenu) {
-    burger.classList.remove("burger--active");
-    mobileMenu.classList.remove("menu--active");
-    bodyLock.classList.remove("lock");
-  }
+  document.addEventListener("click", function (e) {
+    if (e.target !== burger && e.target !== mobileMenu) {
+      mobileMenu.classList.remove("menu--active");
+      bodyLock.classList.remove("lock");
+    }
+  });
 });
 
 window.addEventListener("DOMContentLoaded", () => {

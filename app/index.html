@@ -26,14 +26,13 @@
           <a class="logo" href="#">
             <img class="logo__img" src="images/logo.svg" alt="логотип" width="200" height="39">
           </a>
-          <button class="menu__top-img">
-            <img src="images/ico/burgerx.svg" alt="">
-
+          <button class="burger-close">
+            <span class="burger-close__line"></span>
           </button>
         </div>
-        <div class="menu__border">
-        </div>
+
         <ul class="menu__list">
+          <div class="menu__list-border"></div>
           <li class="menu__item active">
             <a class="menu__link button-secondary active" href="#">
               Главная
@@ -119,8 +118,6 @@
         </div>
       </div>
 
-
-
       <nav class="menu-header">
         <a class="logo" href="#">
           <img class="logo__img" src="images/logo.svg" alt="логотип" width="200" height="39">
@@ -166,7 +163,9 @@
             </li>
           </ul>
           <button class="burger" type="button">
-            <span class="burger__line"></span>
+            <span></span>
+            <span></span>
+            <span></span>
             <span class="sr-only">Открыть меню</span>
           </button>
         </div>
@@ -420,28 +419,28 @@
     </button>
   </div>
 </section>
-  <section class="info section">
+  <section class="info-delivery section">
   <div class="container">
-    <div class="info__box">
-      <div class="info__photo" style="background-image: url('images/food_delivery.png');">
+    <div class="info-delivery__box">
+      <div class="info-delivery__photo" style="background-image: url('images/food_delivery.png');">
       </div>
 
-      <div class="info-inner">
-        <h2 class="title info-inner__title">
+      <div class="info-delivery__inner">
+        <h2 class="title info-delivery__title">
           Оставайтесь дома, <br>
           а мы позаботимся о еде
         </h2>
-        <p class="info-inner__description">
+        <p class="info-delivery__description">
           У нас есть вкусная еда и мы готовы доставить её к вам домой! Воспользуйтесь нашей доставкой прямо сейчас и
           получите
           скидку!
         </p>
 
-        <ul class="info-inner__list">
-          <li class="info-inner__item info-inner__item--stopwatch">Быстрая доставка за 15 минут
+        <ul class="info-delivery__list">
+          <li class="info-delivery__item info-delivery__item--stopwatch">Быстрая доставка за 15 минут
           </li>
-          <li class="info-inner__item info-inner__item--delivery">Вежливые курьеры</li>
-          <li class="info-inner__item info-inner__item--shop">Более 500 заведений</li>
+          <li class="info-delivery__item info-delivery__item--delivery">Вежливые курьеры</li>
+          <li class="info-delivery__item info-delivery__item--shop">Более 500 заведений</li>
         </ul>
         <a class="button-accent" href="#">Подробнее</a>
       </div>
@@ -460,7 +459,7 @@
 
         <ul class="restaurants-category swiper-wrapper">
 
-          <li class="restaurants-category__list swiper-slide">
+          <li class="swiper-slide">
             <article class="restaurants-cards">
               <img class="restaurants-cards__img" src="images/restaurants/blaze_pizza.jpg" alt="фото пиццы" width="370"
                 height="300">
@@ -484,9 +483,9 @@
             </article>
           </li>
 
-          <li class="restaurants-category__list swiper-slide">
+          <li class="swiper-slide">
             <article class="restaurants-cards">
-              <img class="restaurants-cards-img" src="images/restaurants/pizza_runcho.jpg" alt="Pizza Runcho"
+              <img class="restaurants-cards__img" src="images/restaurants/pizza_runcho.jpg" alt="Pizza Runcho"
                 width="370" height="300">
               <div class="restaurants-cards__box">
                 <h3 class="restaurants-cards__text">
@@ -508,7 +507,7 @@
 
           </li>
 
-          <li class="restaurants-category__list swiper-slide">
+          <li class="swiper-slide">
             <article class="restaurants-cards">
               <img class="restaurants-cards__img" src="images/restaurants/pizza_hut.jpg" alt="Pizza Hut" width="370"
                 height="300">
@@ -532,7 +531,7 @@
 
           </li>
 
-          <li class="restaurants-category__list swiper-slide">
+          <li class="swiper-slide">
             <article class="restaurants-cards">
               <img class="restaurants-cards__img" src="images/restaurants/mcdonalds.jpg" alt="McDonald`s" width="370"
                 height="300">
@@ -556,7 +555,7 @@
 
           </li>
 
-          <li class="restaurants-category__list swiper-slide">
+          <li class="swiper-slide">
             <article class="restaurants-cards">
               <img class="restaurants-cards__img" src="images/restaurants/kfc.jpg" alt="KFC" width="370" height="300">
               <div class="restaurants-cards__box">
@@ -578,7 +577,7 @@
             </article>
 
           </li>
-          <li class="restaurants-category__list swiper-slide">
+          <li class="swiper-slide">
             <article class="restaurants-cards">
               <img class="restaurants-cards__img" src="images/restaurants/star_burgers.jpg" alt="Star Burgers"
                 width="370" height="300">
@@ -736,12 +735,12 @@
         </p>
         <ul class="connect__list">
           <li class="connect__item">
-            <a class="connect__link" href="#" target="_blank" rel=”noreferrer”>
+            <a class="connect__link" href="#" target="_blank" rel="noreferrer">
               <img src="images/app_store.svg" width="120" height="40" alt="ссылка на эппл стор">
             </a>
           </li>
           <li class="connect__item">
-            <a class="connect__link" href="#" target="_blank" rel=”noreferrer”>
+            <a class="connect__link" href="#" target="_blank" rel="noreferrer">
               <img src="images/google_play.svg" width="135" height="40" alt="ссылка на гугл плей">
             </a>
           </li>
@@ -765,9 +764,9 @@
         </a>
 
         <form class="form-subscribe">
-          <label for="email">
-            <input class="form-subscribe__input" id="email" type="email" placeholder="Ваш email" name="email" required>
-          </label>
+          <label class="sr-only">ввод почты</label>
+          <input class="form-subscribe__input" type="email" placeholder="Ваш email" name="email" required>
+
 
           <button class="button-accent form-subscribe__btn" type="submit">
             <svg>
@@ -783,44 +782,73 @@
           <a class="footer__item-link button-secondary" href="#">
             Как это работает
           </a>
+        </li>
+        <li class="footer__item ">
           <a class="footer__item-link button-secondary" href="#">
             Продукты
           </a>
+
+        </li>
+        <li class="footer__item ">
           <a class="footer__item-link button-secondary" href="#">
             Блюда
           </a>
+
+        </li>
+        <li class="footer__item ">
           <a class="footer__item-link button-secondary" href="#">
             Меню
           </a>
+
         </li>
+
 
         <li class="footer__item">
           <a class="footer__item-link button-secondary" href="#">
             О нас
           </a>
+
+        <li class="footer__item ">
           <a class="footer__item-link button-secondary" href="#">
             Новости
           </a>
+
+        </li>
+        </li>
+        <li class="footer__item ">
           <a class="footer__item-link button-secondary" href="#">
             Партнеры
           </a>
+
+        </li>
+        <li class="footer__item ">
           <a class="footer__item-link button-secondary" href="#">
             ЧаВо
           </a>
+
         </li>
         <li class="footer__item">
           <a class="footer__item-link button-secondary" href="#">
             Скачать приложение
           </a>
+        </li>
+        <li class="footer__item ">
           <a class="footer__item-link button-secondary" href="#">
             Блог
           </a>
+
+        </li>
+        <li class="footer__item ">
           <a class="footer__item-link button-secondary" href="#">
             Что нового?
           </a>
+
+        </li>
+        <li class="footer__item ">
           <a class="footer__item-link button-secondary" href="#">
             Карта сайта
           </a>
+
         </li>
       </ul>
 
