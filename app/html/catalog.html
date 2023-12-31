@@ -1,0 +1,16 @@
+@include('components/parts/_head.html',{
+"pageTitle": "Каталог товаров"
+})
+@include('components/parts/_header.html')
+@include('components/parts/_header-bottom-menu.html')
+<main class="main ">
+  @include('components/page-catalog/_catalog-product.html')
+  @include('components/page-catalog/_discounts.html')
+
+
+
+  @include('components/parts/_connect.html')
+</main>
+@include('components/parts/_footer.html')
+@include('components/parts/_footer-bottom.html')
+@include('components/parts/_footer-scripts.html')

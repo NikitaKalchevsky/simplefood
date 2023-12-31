@@ -25,8 +25,12 @@ const htmlInclude = () => {
 function scripts() {
   return src([
     "node_modules/jquery/dist/jquery.js",
+    "node_modules/jquery-ui/dist/jquery-ui.js",
     "node_modules/swiper/swiper-bundle.js",
     "node_modules/mixitup/dist/mixitup.js",
+    "node_modules/jquery-form-styler/dist/jquery.formstyler.js",
+
+    "node_modules/ion-rangeslider/js/ion.rangeSlider.js",
     "app/js/main.js",
   ])
     .pipe(concat("main.min.js"))

@@ -132,10 +132,9 @@
   box-shadow: 0 0 0 1px $silver-200;
   padding: 20px 5px;
   transition: box-shadow 0.4s ease-in-out;
+  height: 299px;
 
-  @include mq("tablet") {
-    height: 299px;
-  }
+
 
   &:hover {
     box-shadow: $box-shadow-border;
