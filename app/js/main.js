@@ -80,13 +80,23 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuTopImg = document.querySelector(".burger-close");
   const bodyLock = document.querySelector("body");
 
+  const catalogProductBurger = document.querySelector(
+    ".catalog-product__burger"
+  );
+  const catalogProductBurgerClose = document.querySelector(
+    ".catalog-product__burger-close"
+  );
+  const catalogProductBox = document.querySelector(".catalog-product__box");
+
   // Код для Mobile Menu
-  burger.addEventListener("click", () => {
-    mobileMenu.classList.toggle("menu--active");
-    if (mobileMenu.classList.contains("menu--active")) {
-      bodyLock.classList.add("lock");
-    } else {
-      bodyLock.classList.remove("lock");
+  burger.addEventListener("click", (e) => {
+    if (e.target !== catalogProductBurger) {
+      mobileMenu.classList.toggle("menu--active");
+      if (mobileMenu.classList.contains("menu--active")) {
+        bodyLock.classList.add("lock");
+      } else {
+        bodyLock.classList.remove("lock");
+      }
     }
   });
 
@@ -103,16 +113,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Код для Catalog Product Menu
-  const catalogProductBurger = document.querySelector(
-    ".catalog-product__burger"
-  );
-
-  const catalogProductBurgerClose = document.querySelector(
-    ".catalog-product__burger-close"
-  );
-
-  const catalogProductBox = document.querySelector(".catalog-product__box");
-
   catalogProductBurger.addEventListener("click", () => {
     catalogProductBurger.classList.toggle("catalog-product__burger--active");
     catalogProductBox.classList.toggle("catalog-product__box--active");
