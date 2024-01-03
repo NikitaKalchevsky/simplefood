@@ -95,9 +95,6 @@
   }
 
   &__burger {
-    .lock {
-      overflow: hidden
-    }
 
     @include mq("phone") {
       display: block;
@@ -260,12 +257,8 @@
     }
   }
 
-
-
   &__swiper-item {
     padding: 0 7px;
-
-
   }
 
   &__swiper {
@@ -278,9 +271,6 @@
   }
 
 }
-
-
-
 
 .jq-selectbox__select-text {
   @extend %rubik;

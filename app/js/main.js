@@ -94,6 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
       mobileMenu.classList.toggle("menu--active");
       if (mobileMenu.classList.contains("menu--active")) {
         bodyLock.classList.add("lock");
+        bodyLock.classList.add("lock");
       } else {
         bodyLock.classList.remove("lock");
       }
