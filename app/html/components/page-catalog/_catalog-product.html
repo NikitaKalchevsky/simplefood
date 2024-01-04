@@ -7,7 +7,7 @@
       <div class="catalog-product__menu">
         <button class="catalog-product__burger"></button>
 
-        <form class="catalog-product__select" action="">
+        <form class="catalog-product__select" action="submit-form">
           <select class="catalog-product__filter-sort select-style">
             <option value="">По названию</option>
             <option value="">По алфавиту</option>
@@ -24,7 +24,6 @@
       </div>
     </div>
 
-
     <div class="catalog-product__hero">
       <div class="catalog-product__box ">
         <button class="catalog-product__burger-close">
@@ -34,6 +33,7 @@
           <h3 class="catalog-product__caption">
             Категории
           </h3>
+          <span class="catalog-product__border"></span>
 
           <ul class="catalog-product__items">
             <li class="catalog-product__item">
@@ -89,7 +89,7 @@
               <form>
                 <label class="catalog-product__label">
                   <input class="catalog-product__checkbox" type="checkbox">
-                  Со скидкой
+                  <span class="catalog-product__checkbox-text">Со скидкой</span>
                 </label>
               </form>
 
@@ -142,241 +142,6 @@
           </div>
         </div>
       </div>
-
-
-
-      <!-- <div class="catalog-product__wrap">
-        <ul class="catalog-product__food">
-          <li class="catalog-product__item mix cat-b" data-order="1">
-            <article class="product-card">
-              <img class="product-card__img" src="images/burgers/1.jpg" alt="Чизбургер с листьями салата" width="140"
-                height="140">
-              <h3 class="product-card__text">
-                Чизбургер с листьями салата
-              </h3>
-              <span class="product-card__price">
-                160 <span>грн</span>.
-              </span>
-              <button class="button-accent product-card__btn" type="button">
-                В корзину
-              </button>
-            </article>
-          </li>
-          <li class="catalog-product__item mix cat-b" data-order="1">
-            <article class="product-card">
-              <img class="product-card__img" src="images/burgers/2.jpg" alt="Бифбургер" width="140" height="140">
-              <h3 class="product-card__text">
-                Бифбургер
-              </h3>
-              <span class="product-card__price">
-                190 <span>грн</span>.
-              </span>
-              <button class="button-accent product-card__btn" type="button">
-                В корзину
-              </button>
-            </article>
-          </li>
-          <li class="catalog-product__item mix cat-b" data-order="1">
-            <article class="product-card">
-              <img class="product-card__img" src="images/burgers/3.jpg" alt="Королевский чизбургер" width="140"
-                height="140">
-              <h3 class="product-card__text">
-                Королевский чизбургер
-              </h3>
-              <span class="product-card__price">
-                260 <span>грн</span>.
-              </span>
-
-              <button class="button-accent product-card__btn" type="button">
-                В корзину
-              </button>
-            </article>
-          </li>
-
-          <li class="catalog-product__item mix cat-b" data-order="1">
-            <article class="product-card">
-
-              <img class="product-card__img" src="images/burgers/4.jpg" alt="Черный гамбургер" width="140" height="140">
-              <h3 class="product-card__text">
-                Черный гамбургер
-              </h3>
-              <span class="product-card__price">
-                199 <span>грн</span>.
-              </span>
-              <button class="button-accent product-card__btn" type="button">
-                В корзину
-              </button>
-            </article>
-          </li>
-          <li class="catalog-product__item mix cat-b" data-order="1">
-            <article class="product-card">
-              <img class="product-card__img" src="images/burgers/1.jpg" alt="Чизбургер с листьями салата" width="140"
-                height="140">
-              <h3 class="product-card__text">
-                Чизбургер с листьями салата
-              </h3>
-              <span class="product-card__price">
-                160 <span>грн</span>.
-              </span>
-              <button class="button-accent product-card__btn" type="button">
-                В корзину
-              </button>
-            </article>
-          </li>
-          <li class="catalog-product__item mix cat-b" data-order="1">
-            <article class="product-card">
-              <img class="product-card__img" src="images/burgers/2.jpg" alt="Бифбургер" width="140" height="140">
-              <h3 class="product-card__text">
-                Бифбургер
-              </h3>
-              <span class="product-card__price">
-                190 <span>грн</span>.
-              </span>
-              <button class="button-accent product-card__btn" type="button">
-                В корзину
-              </button>
-            </article>
-          </li>
-          <li class="catalog-product__itemmix cat-b" data-order="1">
-            <article class="product-card">
-              <img class="product-card__img" src="images/burgers/3.jpg" alt="Королевский чизбургер" width="140"
-                height="140">
-              <h3 class="product-card__text">
-                Королевский чизбургер
-              </h3>
-              <span class="product-card__price">
-                260 <span>грн</span>.
-              </span>
-
-              <button class="button-accent product-card__btn" type="button">
-                В корзину
-              </button>
-            </article>
-          </li>
-
-          <li class="catalog-product__itemmix cat-b" data-order="1">
-            <article class="product-card">
-
-              <img class="product-card__img" src="images/burgers/4.jpg" alt="Черный гамбургер" width="140" height="140">
-              <h3 class="product-card__text">
-                Черный гамбургер
-              </h3>
-              <span class="product-card__price">
-                199 <span>грн</span>.
-              </span>
-              <button class="button-accent product-card__btn" type="button">
-                В корзину
-              </button>
-            </article>
-          </li>
-          <li class="catalog-product__item mix cat-b" data-order="1">
-            <article class="product-card">
-              <img class="product-card__img" src="images/burgers/1.jpg" alt="Чизбургер с листьями салата" width="140"
-                height="140">
-              <h3 class="product-card__text">
-                Чизбургер с листьями салата
-              </h3>
-              <span class="product-card__price">
-                160 <span>грн</span>.
-              </span>
-              <button class="button-accent product-card__btn" type="button">
-                В корзину
-              </button>
-            </article>
-          </li>
-          <li class="catalog-product__item mix cat-d" data-order="1">
-            <article class="product-card">
-              <img class="product-card__img" src="images/burgers/2.jpg" alt="Бифбургер" width="140" height="140">
-              <h3 class="product-card__text">
-                Бифбургер
-              </h3>
-              <span class="product-card__price">
-                190 <span>грн</span>.
-              </span>
-              <button class="button-accent product-card__btn" type="button">
-                В корзину
-              </button>
-            </article>
-          </li>
-          <li class="catalog-product__item mix cat-c" data-order="1">
-            <article class="product-card">
-
-              <img class="product-card__img" src="images/burgers/3.jpg" alt="Королевский чизбургер" width="140"
-                height="140">
-              <h3 class="product-card__text">
-                Королевский чизбургер
-              </h3>
-              <span class="product-card__price">
-                260 <span>грн</span>.
-              </span>
-
-              <button class="button-accent product-card__btn" type="button">
-                В корзину
-              </button>
-            </article>
-          </li>
-
-          <li class="catalog-product__item mix cat-b" data-order="2">
-            <article class="product-card">
-
-              <img class="product-card__img" src="images/burgers/4.jpg" alt="Черный гамбургер" width="140" height="140">
-              <h3 class="product-card__text">
-                Черный гамбургер
-              </h3>
-              <span class="product-card__price">
-                199 <span>грн</span>.
-              </span>
-              <button class="button-accent product-card__btn" type="button">
-                В корзину
-              </button>
-            </article>
-          </li>
-
-        </ul>
-
-
-        <ul class="catalog-product__swiper">
-          <li class="catalog-product__swiper-item">
-            <button class="catalog-product__swiper-btn" type="button" data-filter="all">
-              <svg>
-                <use xlink:href="images/sprite.svg#arrowmenu"></use>
-              </svg>
-            </button>
-          </li>
-          <li class="catalog-product__swiper-item">
-            <button class="catalog-product__swiper-btn" type="button" data-filter=".cat-b">
-              1
-            </button>
-          </li>
-          <li class="catalog-product__swiper-item">
-            <button class="catalog-product__swiper-btn" type="button" data-filter=".cat-c">
-              2
-            </button>
-          </li>
-          <li class="catalog-product__swiperitem">
-            <button class="catalog-product__swiper-btn" type="button">
-              ...
-            </button>
-          </li>
-          <li class="catalog-product__swiper-item">
-            <button class="catalog-product__swiper-btn" type="button">
-              9
-            </button>
-          </li>
-          <li class="catalog-product__swiper-item">
-            <button class="catalog-product__swiper-btn" type="button">
-              10
-            </button>
-          </li>
-          <li class="catalog-product__swiper-item">
-            <button class="catalog-product__swiper-btn" type="button">
-              <svg>
-                <use xlink:href="images/sprite.svg#arrowmenu"></use>
-              </svg>
-            </button>
-          </li>
-        </ul>
-      </div> -->
 
       <div class="catalog-product__wrap">
         <ul class="catalog-product__food">
@@ -566,7 +331,6 @@
           </li>
         </ul>
 
-
         <ul class="catalog-product__swiper">
           <li class="catalog-product__swiper-item ">
             <button class="catalog-product__swiper-arrow catalog-product__swiper-left" type="button" data-filter="all">
@@ -609,10 +373,6 @@
           </li>
         </ul>
       </div>
-
-
-
-
 
     </div>
 
