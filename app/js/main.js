@@ -73,58 +73,6 @@ window.addEventListener("scroll", function () {
   }
 });
 
-//burger menu
-document.addEventListener("DOMContentLoaded", () => {
-  const burger = document.querySelector(".burger");
-  const mobileMenu = document.querySelector(".menu");
-  const menuTopImg = document.querySelector(".burger-close");
-  const bodyLock = document.querySelector("body");
-
-  const catalogProductBurger = document.querySelector(
-    ".catalog-product__burger"
-  );
-  const catalogProductBurgerClose = document.querySelector(
-    ".catalog-product__burger-close"
-  );
-  const catalogProductBox = document.querySelector(".catalog-product__box");
-
-  // Код для Mobile Menu
-  burger.addEventListener("click", (e) => {
-    if (e.target !== catalogProductBurger) {
-      mobileMenu.classList.toggle("menu--active");
-      if (mobileMenu.classList.contains("menu--active")) {
-        bodyLock.classList.add("lock");
-        bodyLock.classList.add("lock");
-      } else {
-        bodyLock.classList.remove("lock");
-      }
-    }
-  });
-
-  menuTopImg.addEventListener("click", () => {
-    mobileMenu.classList.remove("menu--active");
-    bodyLock.classList.remove("lock");
-  });
-
-  document.addEventListener("click", function (e) {
-    if (e.target !== burger && e.target !== mobileMenu) {
-      mobileMenu.classList.remove("menu--active");
-      bodyLock.classList.remove("lock");
-    }
-  });
-
-  // Код для Catalog Product Menu
-  catalogProductBurger.addEventListener("click", () => {
-    catalogProductBurger.classList.toggle("catalog-product__burger--active");
-    catalogProductBox.classList.toggle("catalog-product__box--active");
-  });
-
-  catalogProductBurgerClose.addEventListener("click", () => {
-    catalogProductBurger.classList.remove("catalog-product__burger--active");
-    catalogProductBox.classList.remove("catalog-product__box--active");
-  });
-});
-
 //swiper
 window.addEventListener("DOMContentLoaded", () => {
   const resizableSwiper = (
@@ -213,4 +161,56 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+//burger menu
+
+document.addEventListener("DOMContentLoaded", (e) => {
+  const bodyLock = document.querySelector("body");
+
+  document.body.addEventListener("click", (e) => {
+    const burger = document.querySelector(".burger");
+    const mobileMenu = document.querySelector(".menu");
+    const menuTopImg = document.querySelector(".burger-close");
+
+    const catalogProductBurger = document.querySelector(
+      ".catalog-product__burger"
+    );
+    const catalogProductBox = document.querySelector(".catalog-product__box");
+    const catalogProductBurgerClose = document.querySelector(
+      ".catalog-product__burger-close"
+    );
+
+    // Handle Mobile Menu
+    if (e.target === burger) {
+      mobileMenu.classList.toggle("menu--active");
+      bodyLock.classList.toggle(
+        "lock",
+        mobileMenu.classList.contains("menu--active")
+      );
+    } else if (e.target !== mobileMenu) {
+      mobileMenu.classList.remove("menu--active");
+      bodyLock.classList.remove("lock");
+    }
+
+    // Handle Catalog Product Menu
+    if (e.target === catalogProductBurger) {
+      catalogProductBurger.classList.toggle("catalog-product__burger--active");
+      catalogProductBox.classList.toggle("catalog-product__box--active");
+      bodyLock.classList.toggle(
+        "lock",
+        catalogProductBurger.classList.contains(
+          "catalog-product__burger--active"
+        )
+      );
+    } else if (e.target === catalogProductBurgerClose) {
+      catalogProductBurger.classList.remove("catalog-product__burger--active");
+      catalogProductBox.classList.remove("catalog-product__box--active");
+      bodyLock.classList.remove("lock");
+    } else if (e.target !== catalogProductBox) {
+      catalogProductBox.classList.remove("catalog-product__box--active");
+      bodyLock.classList.remove("lock");
+    }
+  });
+});
+
+//mixitup slider
 var mixer = mixitup(".popular-category");
