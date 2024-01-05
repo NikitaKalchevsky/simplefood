@@ -190,6 +190,32 @@
     margin-left: 14px;
   }
 
+  &__checkbox-text {
+    transition: color 0.4s;
+
+    &:hover {
+      color: $orange-900;
+    }
+
+    &:focus {
+      color: #31352B;
+    }
+  }
+
+  &__checkbox {
+    transition: border 0.4s,
+      color 0.4s;
+
+    &:hover {
+      border: 1px solid $orange-900;
+      border-radius: 3px;
+    }
+
+    &:focus {
+      color: $orange-900;
+    }
+  }
+
   &__checkbox {
     position: relative;
     appearance: none;
@@ -199,6 +225,8 @@
     border-radius: 5px;
     box-shadow: 1px solid $silver-200;
 
+
+
     &::before {
       content: '';
       display: block;
@@ -206,6 +234,7 @@
       width: 12px;
       height: 11px;
       transform: translate(50%, 50%);
+
     }
   }
 
@@ -213,6 +242,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url("../images/ico/checkbox.svg");
+
   }
 
   &__swiper-arrow {
