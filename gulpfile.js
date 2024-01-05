@@ -6,6 +6,8 @@ const uglify = require("gulp-uglify-es").default;
 const imagemin = require("gulp-imagemin");
 const del = require("del");
 const fileInclude = require("gulp-file-include");
+const fonter = require("gulp-fonter");
+const ttf2woff2 = require("gulp-ttf2woff2");
 const browserSync = require("browser-sync").create();
 const svgSprite = require("gulp-svg-sprite");
 const autoprefixer = require("gulp-autoprefixer");
@@ -21,6 +23,18 @@ const htmlInclude = () => {
     .pipe(dest("app")) // указываем, в какую папку поместить готовый файл html
     .pipe(browserSync.stream());
 };
+
+function fonts() {
+  return src("app/fonts/src/*.*")
+    .pipe(
+      fonter({
+        formats: ["woff", "ttf"],
+      })
+    )
+    .pipe(src("app/fonts/*.ttf"))
+    .pipe(ttf2woff2())
+    .pipe(dest("app/fonts"));
+}
 
 function scripts() {
   return src([
@@ -77,9 +91,19 @@ function images() {
 }
 
 function build() {
-  return src(["app/**/*.html", "app/css/style.min.css", "app/js/main.min.js"], {
-    base: "app",
-  }).pipe(dest("dist"));
+  return src(
+    [
+      "app/**/*.html",
+      "app/css/style.min.css",
+      "!app/images/*.svg",
+      "app/images/sprite.svg",
+      "app/fonts/*.*",
+      "app/js/main.min.js",
+    ],
+    {
+      base: "app",
+    }
+  ).pipe(dest("dist"));
 }
 
 function cleanDist() {
@@ -101,6 +125,7 @@ function watching() {
 
 exports.htmlInclude = htmlInclude;
 exports.styles = styles;
+exports.fonts = fonts;
 exports.scripts = scripts;
 exports.watching = watching;
 exports.svgSprites = svgSprites;

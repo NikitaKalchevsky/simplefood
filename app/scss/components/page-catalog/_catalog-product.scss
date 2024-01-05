@@ -186,6 +186,10 @@
     display: flex;
   }
 
+  &__checkbox-text {
+    margin-left: 14px;
+  }
+
   &__checkbox {
     position: relative;
     appearance: none;
