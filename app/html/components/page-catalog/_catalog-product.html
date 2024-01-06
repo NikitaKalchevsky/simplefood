@@ -1,11 +1,16 @@
 <section class="catalog-product section">
   <div class="container">
     <div class="catalog-product__top">
+      <h1 class="sr-only">
+        Страница с каталогом товаров
+      </h1>
       <h2 class="title catalog-product__title">
         Каталог продуктов
       </h2>
       <div class="catalog-product__menu">
-        <button class="catalog-product__burger"></button>
+        <button class="catalog-product__burger" type="button">
+          <span class="sr-only">сортировка меню</span>
+        </button>
 
         <form class="catalog-product__select" action="submit-form">
           <select class="catalog-product__filter-sort select-style">
@@ -26,15 +31,14 @@
 
     <div class="catalog-product__hero">
       <div class="catalog-product__box ">
-        <button class="catalog-product__burger-close">
+        <button class="catalog-product__burger-close" type="button">
+          <span class="sr-only"> меню категорий</span>
           <span class="catalog-product__burger-line"></span>
         </button>
         <div class="catalog-product__category">
           <h3 class="catalog-product__caption">
             Категории
           </h3>
-          <span class="catalog-product__border"></span>
-
           <ul class="catalog-product__items">
             <li class="catalog-product__item">
               <a class="button-secondary catalog-product__item-link" href="#">
@@ -149,7 +153,7 @@
 
       <div class="catalog-product__wrap">
         <ul class="catalog-product__food">
-          <li class="catalog-product__item mix cat-b" data-order="1">
+          <li class="catalog-product__item">
             <article class="product-card">
               <img class="product-card__img" src="images/burgers/1.jpg" alt="Чизбургер с листьями салата" width="140"
                 height="140">
@@ -164,7 +168,7 @@
               </button>
             </article>
           </li>
-          <li class="catalog-product__item mix cat-b" data-order="1">
+          <li class="catalog-product__item">
             <article class="product-card">
               <img class="product-card__img" src="images/burgers/2.jpg" alt="Бифбургер" width="140" height="140">
               <h3 class="product-card__text">
@@ -178,7 +182,7 @@
               </button>
             </article>
           </li>
-          <li class="catalog-product__item mix cat-b" data-order="1">
+          <li class="catalog-product__item">
             <article class="product-card">
               <img class="product-card__img" src="images/burgers/3.jpg" alt="Королевский чизбургер" width="140"
                 height="140">
@@ -195,7 +199,7 @@
             </article>
           </li>
 
-          <li class="catalog-product__item mix cat-b" data-order="1">
+          <li class="catalog-product__item">
             <article class="product-card">
 
               <img class="product-card__img" src="images/burgers/4.jpg" alt="Черный гамбургер" width="140" height="140">
@@ -210,7 +214,7 @@
               </button>
             </article>
           </li>
-          <li class="catalog-product__item mix cat-b" data-order="1">
+          <li class="catalog-product__item">
             <article class="product-card">
               <img class="product-card__img" src="images/burgers/1.jpg" alt="Чизбургер с листьями салата" width="140"
                 height="140">
@@ -225,7 +229,7 @@
               </button>
             </article>
           </li>
-          <li class="catalog-product__item mix cat-b" data-order="1">
+          <li class="catalog-product__item">
             <article class="product-card">
               <img class="product-card__img" src="images/burgers/2.jpg" alt="Бифбургер" width="140" height="140">
               <h3 class="product-card__text">
@@ -239,7 +243,7 @@
               </button>
             </article>
           </li>
-          <li class="catalog-product__itemmix cat-b" data-order="1">
+          <li class="catalog-product__item">
             <article class="product-card">
               <img class="product-card__img" src="images/burgers/3.jpg" alt="Королевский чизбургер" width="140"
                 height="140">
@@ -256,7 +260,7 @@
             </article>
           </li>
 
-          <li class="catalog-product__itemmix cat-b" data-order="1">
+          <li class="catalog-product__item">
             <article class="product-card">
 
               <img class="product-card__img" src="images/burgers/4.jpg" alt="Черный гамбургер" width="140" height="140">
@@ -271,7 +275,7 @@
               </button>
             </article>
           </li>
-          <li class="catalog-product__item mix cat-b" data-order="1">
+          <li class="catalog-product__item">
             <article class="product-card">
               <img class="product-card__img" src="images/burgers/1.jpg" alt="Чизбургер с листьями салата" width="140"
                 height="140">
@@ -286,7 +290,7 @@
               </button>
             </article>
           </li>
-          <li class="catalog-product__item mix cat-d" data-order="1">
+          <li class="catalog-product__item">
             <article class="product-card">
               <img class="product-card__img" src="images/burgers/2.jpg" alt="Бифбургер" width="140" height="140">
               <h3 class="product-card__text">
@@ -300,7 +304,7 @@
               </button>
             </article>
           </li>
-          <li class="catalog-product__item mix cat-c" data-order="1">
+          <li class="catalog-product__item">
             <article class="product-card">
 
               <img class="product-card__img" src="images/burgers/3.jpg" alt="Королевский чизбургер" width="140"
@@ -318,7 +322,7 @@
             </article>
           </li>
 
-          <li class="catalog-product__item mix cat-b" data-order="2">
+          <li class="catalog-product__item">
             <article class="product-card">
 
               <img class="product-card__img" src="images/burgers/4.jpg" alt="Черный гамбургер" width="140" height="140">
@@ -344,19 +348,19 @@
             </button>
           </li>
           <li class="catalog-product__swiper-item">
-            <button class="catalog-product__swiper-btn" type="button" data-filter=".cat-b">
+            <button class="catalog-product__swiper-btn catalog-product__swiper-btn--active" type="button">
               1
             </button>
           </li>
           <li class="catalog-product__swiper-item display-none">
-            <button class="catalog-product__swiper-btn" type="button" data-filter=".cat-c">
+            <button class="catalog-product__swiper-btn" type="button">
               2
             </button>
           </li>
           <li class="catalog-product__swiper-item">
-            <button class="catalog-product__swiper-btn" type="button">
+            <div class="catalog-product__swiper-arrow">
               ...
-            </button>
+            </div>
           </li>
           <li class="catalog-product__swiper-item display-none">
             <button class="catalog-product__swiper-btn" type="button">
@@ -369,7 +373,7 @@
             </button>
           </li>
           <li class="catalog-product__swiper-item">
-            <button class="catalog-product__swiper-arrow" type="button">
+            <button class="catalog-product__swiper-arrow catalog-product__swiper-next" type="button">
               <svg>
                 <use xlink:href="images/sprite.svg#arrowmenu"></use>
               </svg>

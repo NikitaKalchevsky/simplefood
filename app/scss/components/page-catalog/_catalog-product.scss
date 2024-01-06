@@ -57,22 +57,26 @@
 
   &__box {
     margin-right: 30px;
+    transition: transform 5s;
 
-    @include mq("phone") {
+    @include mq("tablet") {
       display: none;
-    }
-  }
+      transform: translateX(-200%);
 
-  &__box--active {
-    display: block;
-    position: absolute;
-    z-index: 999;
-    width: 80%;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    padding-top: 70px;
-    background-color: $white;
+    }
+
+    &--active {
+      display: block;
+      position: absolute;
+      z-index: 999;
+      width: 80%;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      padding-top: 70px;
+      background-color: $white;
+      transform: translateX(0%);
+    }
   }
 
   &__top {
@@ -82,6 +86,7 @@
 
     @include mq("tablet") {
       display: block;
+      padding: 30px 0;
     }
   }
 
@@ -91,7 +96,7 @@
 
   &__burger {
 
-    @include mq("phone") {
+    @include mq("tablet") {
       display: block;
       width: 47px;
       height: 47px;
@@ -146,15 +151,21 @@
 
   &__item {
     font-size: 18px;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
   }
 
   &__item-link {
     text-decoration: none;
   }
 
-  &__item:not(:last-child) {
-    margin-bottom: 12px;
-  }
+
 
   &__caption {
     margin-bottom: 40px;
@@ -174,12 +185,8 @@
 
     @include mq("tablet-2") {
       grid-template-columns: repeat(2, 1fr);
-      grid-gap: 5px;
-    }
-  }
 
-  &__swiper-left svg {
-    transform: rotate(180deg);
+    }
   }
 
   &__select {
@@ -191,7 +198,7 @@
   }
 
   &__checkbox-text {
-    transition: color 0.4s;
+    transition: color 0.4s ease-in-out;
 
     &:hover {
       color: $orange-900;
@@ -204,7 +211,7 @@
 
   &__checkbox {
     transition: border 0.4s,
-      color 0.4s;
+      color 0.4s ease-in-out;
 
     &:hover {
       border: 1px solid $orange-900;
@@ -245,13 +252,41 @@
 
   }
 
+  &__swiper-next {
+    transition: background-color 0.4s,
+      filter 0.4s ease-in-out;
+
+    svg {
+      filter: $gray-flter;
+    }
+
+    &:hover {
+      background-color: $orange-900;
+
+      svg {
+        filter: $white-arrow;
+      }
+    }
+  }
+
+  &__swiper-left {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
   &__swiper-arrow {
     padding: 15px;
-    background-color: $white2;
+    background-color: $orange-400;
     border-radius: 3px;
     font-size: 18px;
     width: 48px;
     height: 48px;
+
+    svg {
+      height: 18px;
+      width: 11px;
+    }
 
     &:active {
       svg {
@@ -260,10 +295,7 @@
     }
   }
 
-  &__swiper-arrow svg {
-    height: 18px;
-    width: 11px;
-  }
+
 
   &__swiper-btn {
     background-color: $orange-400;
@@ -275,6 +307,10 @@
       background-color 0.4s,
       box-shadow 0.4s;
 
+    &--active {
+      box-shadow: 0 0 0 1px $title-color;
+    }
+
     &:hover {
       background-color: $orange-900;
       color: $white;
@@ -282,13 +318,13 @@
 
     &:focus {
       background-color: $white2;
-      box-shadow: 0px 0px 0px 2px $orange-900;
+      box-shadow: 0 0 0 2px $orange-900;
       color: $title-color;
     }
 
     &:active {
       background-color: $white2;
-      box-shadow: 0px -1px 4px 2px rgba(0, 0, 0, 0.15) inset;
+      box-shadow: 0 -1px 4px 2px rgba(0, 0, 0, 0.15) inset;
     }
   }
 
@@ -306,6 +342,9 @@
   }
 
   .jq-selectbox {
+    & li {
+      padding: 6px 0;
+    }
 
     &__select-text {
       @extend %rubik;
@@ -323,18 +362,21 @@
       transform: rotate(90deg);
       background-repeat: no-repeat;
       background-image: url("../images/sprite.svg#arrowmenu");
+
+
     }
 
     &__dropdown ul {
       font-size: 14px;
       color: $default-color;
-      padding-left: 30px;
-      padding-right: 10px;
+      text-align: center;
+      padding-top: 5px;
+
       background-color: $white;
     }
 
-    & li {
-      padding: 6px 0;
+    &__dropdown {
+      width: 100%;
     }
 
     &__select {
@@ -348,19 +390,23 @@
       text-shadow: none;
       background: $white;
       border-radius: 3px;
+      transition: border-color 0.4s, color 0.4s ease-in-out;
 
       &:hover {
         border-radius: 3px;
-        box-shadow: $box-shadow-border;
+        border-color: $orange-900;
         background: $white;
         color: $orange-900;
-        border: none;
+
+        .jq-selectbox__trigger-arrow {
+          filter: invert(55%) sepia(13%) saturate(5299%) hue-rotate(333deg) brightness(97%) contrast(110%);
+        }
       }
 
       &:focus {
         color: $default-color;
         background: $white;
-        box-shadow: $box-shadow-border;
+        border-color: $orange-900;
       }
 
       &:active {

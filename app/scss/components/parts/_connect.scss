@@ -6,8 +6,6 @@
   &__box {
     @include flex-space-betwen;
 
-
-
     @include mq ("phone") {
       display: block;
     }
@@ -21,7 +19,7 @@
 
     @include mq ("desktop") {
       width: 450px;
-      height: 300px;
+      height: 280px;
     }
 
     @include mq ("tablet-2") {
@@ -42,6 +40,10 @@
 
     @include mq ("desktop") {
       margin-right: 0;
+
+    }
+
+    @include mq ("tablet") {
       margin-bottom: 50px;
     }
   }
