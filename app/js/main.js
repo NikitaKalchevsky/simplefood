@@ -146,6 +146,34 @@ window.addEventListener("DOMContentLoaded", () => {
       },
     },
   });
+  resizableSwiper("(max-width: 768px)", ".discounts-swiper", {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    direction: "horizontal",
+    speed: 700,
+    pagination: {
+      el: ".discounts__pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+    },
+  });
+
+  resizableSwiper("(max-width: 5000px)", ".cheeseburger__slider", {
+    direction: "horizontal",
+    speed: 700,
+    navigation: {
+      nextEl: ".cheeseburger__button-right",
+      prevEl: ".cheeseburger__button-left",
+    },
+    pagination: {
+      el: ".swiper-pagination6",
+      clickable: true,
+    },
+  });
 
   resizableSwiper("(max-width: 5000px)", ".reviews__slider", {
     direction: "horizontal",
@@ -160,6 +188,7 @@ window.addEventListener("DOMContentLoaded", () => {
     },
   });
 });
+
 //burger
 document.addEventListener("DOMContentLoaded", (e) => {
   const bodyLock = document.querySelector("body");
@@ -213,7 +242,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
     }
   });
 });
-//var mixer
+//var
 document.addEventListener("DOMContentLoaded", function () {
   if (document.querySelector(".popular-category")) {
     var mixer = mixitup(".popular-category");

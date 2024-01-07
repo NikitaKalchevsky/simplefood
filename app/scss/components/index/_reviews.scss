@@ -253,8 +253,7 @@
     }
 
     &::after {
-      content: "";
-      position: absolute;
+      @include pseudo;
       width: 24px;
       height: 20px;
       bottom: 1px;
@@ -264,8 +263,7 @@
     }
 
     &::before {
-      content: "";
-      position: absolute;
+      @include pseudo;
       width: 24px;
       height: 20px;
       @include image-bg;

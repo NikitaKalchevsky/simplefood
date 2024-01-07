@@ -1,0 +1,15 @@
+@include('components/parts/_head.html',{
+"pageTitle": "Чизбургер с листьями салата"
+})
+@include('components/parts/_header.html',{
+"activeclasdishess": "active"
+})
+@include('components/parts/_header-bottom-menu.html')
+<main class="main ">
+  @include('components/page-product/_cheeseburger-info.html')
+  @include('components/page-product/_cheeseburger-reviews.html')
+  @include('components/page-product/_cheeseburger-other.html')
+</main>
+@include('components/parts/_footer.html')
+@include('components/parts/_footer-bottom.html')
+@include('components/parts/_footer-scripts.html')

@@ -107,7 +107,6 @@
   &__img {
     object-fit: cover;
 
-
     @include mq ("desktop") {
       width: 345px;
       height: 300px;
@@ -123,7 +122,6 @@
     margin-bottom: 20px;
     font-size: 24px;
     font-weight: 400;
-
   }
 
   &__inner {

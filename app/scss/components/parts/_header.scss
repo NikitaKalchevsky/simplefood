@@ -1,6 +1,7 @@
 .header {
   padding-top: 165px;
 
+
   @include mq("tablet-2") {
     padding-top: 100px;
   }
@@ -12,20 +13,12 @@
     width: 100%;
     z-index: 999;
     backdrop-filter: blur(8px);
-    transition: box-shadow 0.3s;
     transition: padding 0.4s;
-
-    @include mq("phone") {}
   }
 }
 
-.header-menu.header__container {
-  padding-top: 15px;
-  padding-bottom: 15px;
-
-  @include mq("desktop") {
-    padding: 10px 0;
-  }
+.header-menu.menu-header {
+  padding: 30px 0;
 }
 
 .logo {
@@ -76,6 +69,7 @@
   height: 44px;
   border: none;
   position: relative;
+
   display: none;
 
   @include mq("desktop") {
@@ -103,22 +97,21 @@
 
 .menu {
   display: none;
+  position: relative;
 
   &__top {
     display: flex;
     justify-content: space-between;
-    padding-right: 26px;
+
     padding-bottom: 50px;
   }
 
   &__list {
     margin-bottom: 40px;
-    position: relative;
 
     &::before {
-      content: "";
-      position: absolute;
-      top: -25px;
+      @include pseudo;
+      top: 245px;
       left: -200px;
       width: calc(100% + 200px);
       height: 1px;
@@ -127,9 +120,8 @@
     }
 
     &::after {
-      content: "";
-      position: absolute;
-      top: 132px;
+      @include pseudo;
+      top: 89px;
       left: -200px;
       width: calc(100% + 200px);
       height: 1px;
@@ -159,46 +151,25 @@
     display: block;
     transform: translateX(-200%);
     transition: all 0.4s;
-    padding-top: 6%;
-    padding-left: 17%;
-    width: 550px;
+    width: 80%;
     height: 100vh;
-
-    @include mq("tablet-2") {
-      padding-top: 40px;
-    }
-
-    @include mq("phone") {
-      padding-top: 30px;
-      width: 100vw;
-    }
 
     &.menu--active {
       @include mq("desktop") {
         display: block;
-        transform: translateX(-7%);
+        transform: translateX(0);
         font-size: 30px;
-      }
-
-      @include mq("tablet") {
-        transform: translateX(-11%);
-      }
-
-      @include mq("phone") {
-        transform: translateX(-14%);
+        padding: 25px 25px 0 15px;
       }
     }
   }
 
   .burger-close {
-    position: relative;
-    background-color: $title-color;
     z-index: 2;
+    width: 44px;
+    height: 44px;
 
     &__line {
-      position: absolute;
-      left: 0;
-      top: 50%;
       transform: translateY(-50%);
       width: 100%;
       z-index: 2;
@@ -207,22 +178,20 @@
     &::before,
     &::after {
       content: "";
-      position: absolute;
-      width: calc(100% + 20px);
-      height: calc(100% + 20px);
-      left: -10px;
+      display: flex;
+      margin: 0 auto;
       width: 18px;
       height: 1px;
       background-color: $title-color;
     }
 
     &::before {
-      transform: rotate(45deg);
+      transform: rotate(50deg);
       top: 50%;
     }
 
     &::after {
-      transform: rotate(-45deg);
+      transform: rotate(-50deg);
       top: 50%;
     }
   }
@@ -234,6 +203,7 @@
 
 .menu-header {
   padding: 60px 0;
+  transition: padding 0.4s;
   @include flex-space-betwen;
 
   @include mq("desktop") {
@@ -272,7 +242,6 @@
     justify-content: space-between;
   }
 }
-
 
 .nav {
   display: flex;

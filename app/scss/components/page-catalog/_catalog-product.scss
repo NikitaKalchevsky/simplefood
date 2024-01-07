@@ -4,6 +4,21 @@
   }
 }
 
+.lock-catalog {
+  overflow: hidden;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
 .catalog-product {
   &__hero {
     display: flex;
@@ -13,7 +28,8 @@
   &__burger-close {
     display: none;
 
-    @include mq("phone") {
+
+    @include mq("tablet") {
       position: absolute;
       z-index: 2;
       display: block;
@@ -27,8 +43,7 @@
 
     &::before,
     &::after {
-      content: "";
-      position: absolute;
+      @include pseudo;
       right: 12px;
       width: 18px;
       height: 1px;
@@ -56,18 +71,18 @@
   }
 
   &__box {
+    position: relative;
     margin-right: 30px;
     transition: transform 5s;
 
     @include mq("tablet") {
       display: none;
+      position: absolute;
       transform: translateX(-200%);
-
     }
 
     &--active {
       display: block;
-      position: absolute;
       z-index: 999;
       width: 80%;
       height: 100vh;
@@ -75,7 +90,7 @@
       left: 0;
       padding-top: 70px;
       background-color: $white;
-      transform: translateX(0%);
+      transform: translateX(0);
     }
   }
 
@@ -93,6 +108,7 @@
   &__menu {
     display: flex;
   }
+
 
   &__burger {
 
@@ -138,8 +154,7 @@
     border: 1px solid $silver-200;
 
     &::after {
-      content: "";
-      position: absolute;
+      @include pseudo;
       top: 63px;
       left: 0;
       width: 100%;
@@ -210,6 +225,7 @@
   }
 
   &__checkbox {
+
     transition: border 0.4s,
       color 0.4s ease-in-out;
 
@@ -232,16 +248,11 @@
     border-radius: 5px;
     box-shadow: 1px solid $silver-200;
 
-
-
     &::before {
-      content: '';
-      display: block;
-      position: absolute;
+      @include pseudo;
       width: 12px;
       height: 11px;
       transform: translate(50%, 50%);
-
     }
   }
 
@@ -249,7 +260,6 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url("../images/ico/checkbox.svg");
-
   }
 
   &__swiper-next {
@@ -362,8 +372,6 @@
       transform: rotate(90deg);
       background-repeat: no-repeat;
       background-image: url("../images/sprite.svg#arrowmenu");
-
-
     }
 
     &__dropdown ul {
