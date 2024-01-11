@@ -13,9 +13,10 @@
   }
 
   &__link {
-    font-size: 14px;
     text-decoration: none;
   }
 
-  &__item {}
+  &__item {
+    font-size: 14px;
+  }
 }

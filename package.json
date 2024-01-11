@@ -9,6 +9,7 @@
   "author": "Nikita Kalchevskyi",
   "license": "ISC",
   "devDependencies": {
+    "@fancyapps/ui": "^4.0.30",
     "avif": "^0.5.1",
     "aviv": "^0.0.2",
     "browser-sync": "^2.29.3",
@@ -36,6 +37,7 @@
     "jquery-form-styler": "^2.0.2",
     "jquery-ui": "^1.13.2",
     "mixitup": "^3.3.1",
+    "rateyo": "^2.3.2",
     "sass": "^1.69.5",
     "swiper": "^11.0.5",
     "uglify": "^0.1.5"

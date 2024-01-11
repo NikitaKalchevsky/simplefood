@@ -1,0 +1,228 @@
+.cheeseburger-tabs {
+  padding-top: 30px;
+
+  &__box {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    max-width: 690px;
+    width: 100%;
+  }
+
+  &__top {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-bottom: 30px;
+    padding: 5px 0;
+  }
+
+  &__text:not(:last-child) {
+    margin-bottom: 25px;
+  }
+
+  &__top-item {
+    font-size: 24px;
+    color: $title-color;
+  }
+
+  &__top-item:not(:last-child) {
+    margin-right: 60px;
+  }
+
+  &__top-item--active {
+    color: $orange-900;
+  }
+
+  &__content-item {
+    display: none;
+
+    &.cheeseburger-tabs__content-item--active {
+      display: block;
+    }
+  }
+
+  &__content-description {
+    line-height: 1.5;
+
+    p {
+      font-weight: 500;
+    }
+
+    span {
+      font-weight: 400;
+    }
+  }
+
+  &__content-description:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.comments {
+  &__title {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 30px;
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 46px;
+
+  }
+
+  &__content-border {
+    &::after {
+      @include pseudo;
+      top: 165px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      z-index: 2;
+      height: 2px;
+      border-bottom: 1px solid $silver-border;
+    }
+  }
+
+
+  &__content-wrap {
+    display: flex;
+  }
+
+  &__content-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 26px;
+  }
+
+  &__content-img {
+    width: 70px;
+    height: 70px;
+    margin-right: 25px;
+  }
+
+  &__content-name {
+    margin-bottom: 10px;
+  }
+
+  &__connect-text {
+    position: relative;
+
+  }
+}
+
+.comments-form {
+  &__title {
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 24px;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+
+    &-title {
+      margin-right: 5px;
+    }
+  }
+
+  &__input {
+    display: flex;
+    margin-top: 20px;
+
+    @include mq("tablet") {
+      flex-direction: column;
+    }
+  }
+
+  &__input-label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+
+  &__textarea {
+    width: 400px;
+    min-height: 165px;
+    border: 1px solid $gray;
+    border-radius: 5px;
+    padding: 16px 0 0 18px;
+    font-size: 16px;
+    margin-top: 10px;
+    color: $silver-2;
+  }
+
+  &__input-texarea {
+    margin-right: 30px;
+  }
+
+  &__textbox {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__text {
+    margin-top: 10px;
+    max-width: 260px;
+    height: 57px;
+    padding: 18px;
+    border: 1px solid $gray;
+    border-radius: 5px;
+    font-size: 16px;
+    color: $silver-2;
+  }
+
+  &__checked {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__checked-btn {
+    width: 208px;
+    margin-top: 30px;
+    padding: 12px 0;
+  }
+
+  &__checkbox-label {
+    position: relative;
+    max-width: 654px;
+    height: 46px;
+  }
+
+  &__checkbox {
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    background-color: $white;
+    border-radius: 3px;
+    box-shadow: 1px solid $silver-200;
+
+    &::before {
+      @include pseudo;
+      width: 12px;
+      height: 11px;
+      transform: translate(50%, 50%);
+    }
+  }
+
+  &__checkbox:checked::before {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../images/ico/checkbox.svg");
+  }
+
+
+  &__checkbox-text {
+    margin-left: 10px;
+  }
+
+  &__checkbox-span {
+    margin-left: 45px;
+  }
+}

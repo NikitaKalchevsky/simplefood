@@ -1,0 +1,162 @@
+.exclusive-products {
+  &__title {
+    margin-bottom: 60px;
+  }
+
+  &__wrap {
+    position: relative;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    max-width: 210px;
+
+    @include mq ("phone") {
+      max-width: 170px;
+      padding: 5px;
+    }
+  }
+
+  &__button-swiper {
+    position: absolute;
+    right: 125px;
+    top: 0;
+
+    @include mq ("tablet") {
+      display: none;
+    }
+  }
+
+  .swiper-button-right {
+    position: absolute;
+    transform: translateX(72px);
+  }
+
+  .swiper-button-left {
+    position: absolute;
+    transition: border-color 0.4s,
+      opacity 0.4s,
+      background-color 0.4s,
+      box-shadow 0.4s ease-in-out;
+
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__button {
+    display: flex;
+    border: 2px solid $gray;
+    padding: 8px 13px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: $orange-900;
+    z-index: 900;
+
+    svg {
+      filter: $gray-flter;
+      width: 11px;
+      height: 18px;
+    }
+
+    &:hover {
+      opacity: 0.5;
+      border-color: $orange-900;
+      background-color: $orange-400;
+
+      svg {
+        filter: $orange-btn;
+      }
+    }
+
+    &:focus {
+      border-color: $gray;
+      box-shadow: $orange-900;
+
+      svg {
+        filter: $gray-flter;
+      }
+    }
+
+    &:active {
+      background-color: $orange-400;
+      border-color: transparent;
+
+      svg {
+        filter: $orange-btn;
+      }
+    }
+  }
+
+  &__pagination {
+    margin: 0 auto;
+    position: absolute;
+    left: 40%;
+    z-index: 10;
+    display: none;
+    transform: rotate(-90deg);
+
+    @include mq ("tablet") {
+      display: block;
+    }
+  }
+
+  .swiper-button-prev:after {
+    position: relative;
+  }
+
+  .swiper-pagination-bullets {
+    position: absolute;
+    bottom: -90px;
+    left: -45px;
+
+    span {
+      margin: 0 8px;
+      width: 15px;
+      height: 15px;
+      background-color: $gray;
+      border: 2px solid transparent;
+      box-shadow: 2px;
+      transition: box-shadow 0.4s,
+        background-color 0.4s,
+        opacity 0.4s ease-in-out;
+
+      &:hover {
+        box-shadow: $box-shadow-orange;
+        background-color: $orange-400;
+        opacity: 0.5;
+      }
+
+      &:focus {
+        box-shadow: $box-shadow-orange;
+        background-color: $gray;
+      }
+
+      &:active {
+        background-color: $orange-400;
+      }
+    }
+  }
+
+  .swiper-pagination-bullets .swiper-pagination-bullet-active {
+    background-color: $orange-900;
+    transition: border 0.4s,
+      background-color 0.4s,
+      opacity 0.4s ease-in-out;
+
+    &:hover {
+      box-shadow: $box-shadow-orange;
+      background-color: $orange-400;
+      opacity: 0.5;
+    }
+  }
+
+  .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin-right: 10px;
+  }
+
+}

@@ -4,7 +4,9 @@
 @include('components/parts/_header.html',{
 "activeclasdishess": "active"
 })
-@include('components/parts/_header-bottom-menu.html')
+@include('components/parts/_header-bottom-menu.html',{
+"chesburgerlink": "header-bottom__item"
+})
 <main class="main ">
   @include('components/page-product/_cheeseburger-info.html')
   @include('components/page-product/_cheeseburger-reviews.html')

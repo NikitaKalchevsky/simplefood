@@ -185,15 +185,17 @@
         </svg>
       </li>
       <li class="header-bottom__item">
-        <a class="header-bottom__link " href="#">
+        <a class="header-bottom__link " href="catalog.html">
           Каталог товаров
         </a>
       </li>
       <li class="header-bottom__item">
-
+        <svg>
+          <use xlink:href="images/sprite.svg#arrowmenu"></use>
+        </svg>
       </li>
-      <li class="header-bottom__item">
-
+      <li class="header-bottom__item header-bottom__item">
+        Чизбургер с листьями салата
       </li>
     </ul>
 
@@ -202,23 +204,25 @@
 <main class="main ">
   <section class="cheeseburger">
   <div class="container">
-    <div class="cheeseburger__container">
+    <div class="cheeseburger__container ">
       <h1 class="sr-only">
         Страница с детальным описанием товара
       </h1>
-      <div class="cheeseburger__slider swiper">
-        <ul class="cheeseburger__image swiper-wrapper">
-          <li class="cheeseburger__slider-item swiper-slide">
+      <div class="cheeseburger__slider swiper carousel" id="myCarousel">
+        <ul class="cheeseburger__image swiper-wrapper ">
+          <li data-fancybox="gallery" class="cheeseburger__slider-item swiper-slide carousel__slide"
+            data-src="images/burgers/1.jpg">
             <img class="cheeseburger__slider-img" src="images/burgers/1.jpg" alt="Чизбургер с листьями салата"
               width="400" height="400">
           </li>
 
-          <li class="cheeseburger__slider-item swiper-slide">
+          <li data-fancybox="gallery" class="cheeseburger__slider-item swiper-slide carousel__slide"
+            data-src="images/burgers/3.jpg">
             <img class="cheeseburger__slider-img" src="images/burgers/3.jpg" alt="Чизбургер с листьями салата"
               width="400" height="400">
           </li>
-
-          <li class="cheeseburger__slider-item swiper-slide">
+          <li data-fancybox="gallery" class="cheeseburger__slider-item swiper-slide carousel__slide"
+            data-src="images/burgers/4.jpg">
             <img class="cheeseburger__slider-img" src="images/burgers/4.jpg" alt="Чизбургер с листьями салата"
               width="400" height="400">
           </li>
@@ -244,49 +248,42 @@
         <h2 class="cheeseburger__title title">
           Чизбургер с листьями салата
         </h2>
-        <div class="cheeseburger__awards">
-          <img src="images/ico/star_full.svg" alt="">
-          <img src="images/ico/star_full.svg" alt="">
-          <img src="images/ico/star_full.svg" alt="">
-          <img src="images/ico/star_full.svg" alt="">
-          <img src="images/ico/starnull.svg" alt="">
-        </div>
+        <div class="star cheeseburger__awards" data-rateyo-rating="4"></div>
+
         <p class="cheeseburger__info-price">
           160 грн.
         </p>
-        <ul class="cheeseburger__buy">
-          <li>
-            <button></button>
 
-          </li>
-          <li>
-            <span>1</span>
+        <div class="cheeseburger__form">
+          <form class="cheeseburger__buy" action="">
+            <input class="cheeseburger__buy-num" type="number" value="1">
+          </form>
+          <button type="submit" class="cheeseburger__button button-accent">
+            <svg class="cheeseburger__buy-btn">
+              <use xlink:href="images/sprite.svg#carticon"></use>
+            </svg>
+            Добавить в корзину
+          </button>
+        </div>
 
-          </li>
-          <li>
-            <button></button>
-
-          </li>
-          <li>
-            <button class="button-accent">
-
-              <svg class="cheeseburger__buy-btn">
-                <use xlink:href="images/sprite.svg#carticon"></use>
-              </svg>
-              Добавить в корзину
-            </button>
-
-          </li>
-        </ul>
         <h3 class="cheeseburger__info-text">
           Доставка и оплата
         </h3>
-        <p class="cheeseburger__info-desc">
-          Минимальная сумма заказа — 160 грн.
-          Время доставки заказа — 80-140 мин.
-          Оплата осуществляется только банковской картой.
-          Окончательная сумма заказа формируется после сбора товаров.
-        </p>
+        <ul class="cheeseburger__info-desc">
+          <li>
+            Минимальная сумма заказа — 160 грн
+          </li>
+          <li>
+            Время доставки заказа — 80-140 мин.
+          </li>
+          <li>
+            Оплата осуществляется только банковской картой.
+          </li>
+          <li>
+            Окончательная сумма заказа формируется после сбора товаров.
+          </li>
+
+        </ul>
         <a href="#" class="button-secondary">
           Подробнее
         </a>
@@ -295,8 +292,394 @@
   </div>
 
 </section>
-  
-  
+  <section class="cheeseburger-tabs section">
+  <div class="container">
+    <div class="cheeseburger-tabs__box">
+
+      <div class="cheeseburger-tabs__top">
+
+        <a class="cheeseburger-tabs__top-item cheeseburger-tabs__top-item--active" href="#tab-1">
+          Описание
+        </a>
+        <a class="cheeseburger-tabs__top-item" href="#tab-2">
+          Характеристики
+        </a>
+        <a class="cheeseburger-tabs__top-item " href="#tab-3">
+          Отзывы (2)
+        </a>
+      </div>
+
+      <div class="cheeseburger-tabs__content">
+        <ul class="cheeseburger-tabs__content-item cheeseburger-tabs__content-item--active" id="tab-1">
+          <li class="cheeseburger-tabs__text">
+            <p>
+              Рубленый бифштекс из натуральной говядины на карамелизованной булочке, с ломтиком сыра «Чеддер»,
+              кетчупом,
+              горчицей,
+              луком и маринованными огурчиками.
+            </p>
+          </li>
+          <li class="cheeseburger-tabs__text">
+            <p>
+              Аллергены: Глютен, Молоко, Горчица, Может содержать сою, яйцо, следы кунжута
+            </p>
+          </li>
+          <li class="cheeseburger-tabs__text">
+            <p>
+              Внешний вид товара может отличаться от изображений, представленных на сайте.
+            </p>
+          </li>
+        </ul>
+
+        <ul class="cheeseburger-tabs__content-item" id="tab-2">
+          <li class="cheeseburger-tabs__content-description">
+            <p>Диаметр:
+              <span>
+                20 см
+              </span>
+            </p>
+          </li>
+          <li class="cheeseburger-tabs__content-description">
+            <p>Вес:
+              <span>
+                300 гр
+              </span>
+            </p>
+          </li>
+          <li class="cheeseburger-tabs__content-description">
+            <p>Калорийность (на 100г):
+              <span>
+                295 ккал
+              </span>
+            </p>
+          </li>
+          <li class="cheeseburger-tabs__content-description">
+            <p>Срок хранения:
+              <span>
+                до 3 дней
+              </span>
+            </p>
+          </li>
+        </ul>
+
+        <div class="cheeseburger-tabs__content-item" id="tab-3">
+          <div class="comments">
+            <h3 class="comments__title">
+              Мнения наших клиентов
+            </h3>
+
+            <div class="comments__content comments__content-border">
+              <div class="comments__content-inner">
+                <figure class="comments__content-wrap">
+                  <img class="comments__content-img" src="images/image_reviews.jpg" alt="фото клиента">
+                  <div class="comments__content-box">
+                    <p class="comments__content-name">
+                      Андрей
+                    </p>
+                    <time class="comments__content-data" date="10-06-2021">
+                      10.06.2021
+                    </time>
+                  </div>
+                </figure>
+                <div class="star comments__content-star" data-rateyo-rating="5"></div>
+              </div>
+              <blockquote class="comments__content-text">
+                Доставили быстро. Товар свежий и очень вкусный, буду пробовать еще!))
+              </blockquote>
+            </div>
+            <div class="comments__content">
+              <div class="comments__content-inner">
+                <figure class="comments__content-wrap">
+                  <img class="comments__content-img" src="images/image_reviews.jpg" alt="фото клиента">
+                  <div class="comments__content-box">
+                    <p class="comments__content-name">
+                      Екатерина Белая
+                    </p>
+                    <time class="comments__content-data" date="7-06-2021">
+                      7.06.2021
+                    </time>
+                  </div>
+                </figure>
+                <div class="star comments__content-star" data-rateyo-rating="4"></div>
+              </div>
+              <blockquote class="comments__content-text">
+                этот бургер неплохой чтобы перекусить, когда нет возможности или времени что-нибудь приготовить. Это
+                отличный вариант,
+                чтобы съесть на ходу, но чтобы побаловать себя, я больше предпочту пиццу
+              </blockquote>
+            </div>
+
+            <h3 class="comments-form__title">
+              Оставить отзыв
+            </h3>
+
+            <form class="comments-form action=" #">
+              <div class="comments-form__label">
+                <span class="comments-form__label-title">Ваша оценка *</span>
+                <div class="star-nofix"></div>
+              </div>
+
+              <div class="comments-form__input">
+
+                <label class="comments-form__input-label comments-form__input-texarea" for="">Ваш отзыв *
+                  <textarea class="comments-form__textarea" placeholder="Введите текст отзыва"></textarea>
+                </label>
+
+                <div class="comments-form__textbox">
+                  <label class="comments-form__input-label" for="">Имя
+
+                    <input class="comments-form__text" type="text" placeholder="Введите ваше имя">
+                  </label>
+                  <label class="comments-form__input-label" for="">Email *
+
+                    <input class="comments-form__text" type="text" placeholder="youremail@mail.com">
+                  </label>
+                </div>
+              </div>
+              <div class="comments-form__checked">
+                <div class="comments-form__checked-box">
+                  <input class="comments-form__checkbox" type="checkbox">
+                  <label class="comments-form__checkbox-label" for="">
+                    Сохранить моё имя, email и адрес сайта в этом браузере для последующих моих
+                    комментариев.
+                  </label>
+                </div>
+                <button class="comments-form__checked-btn button-accent" type="submit">
+                  Оставить отзыв
+                </button>
+
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+</section>
+  <section class="exclusive-products section">
+
+  <div class="container">
+    <div class="exclusive-products__wrap">
+
+      <h2 class="exclusive-products__title title">
+        Вас может заинтересовать
+      </h2>
+      <div class="exclusive-products__swiper swiper">
+
+        <ul class="exclusive-products__box swiper-wrapper">
+          <li class="exclusive-products__item swiper-slide">
+            <article class="product-card">
+              <a href="cheeseburger.html">
+                <img class="product-card__img" src="images/burgers/1.jpg" alt="Чизбургер с листьями салата" width="140"
+                  height="140">
+              </a>
+              <h3 class="product-card__text">
+                Чизбургер с листьями салата
+              </h3>
+              <span class="product-card__price">
+                160 <span>грн</span>.
+              </span>
+              <button class="button-accent product-card__btn" type="button">
+                В корзину
+              </button>
+            </article>
+          </li>
+
+          <li class="exclusive-products__item swiper-slide">
+            <article class="product-card">
+              <img class="product-card__img" src="images/burgers/2.jpg" alt="Бифбургер" width="140" height="140">
+              <h3 class="product-card__text">
+                Бифбургер
+              </h3>
+              <span class="product-card__price">
+                190 <span>грн</span>.
+              </span>
+              <button class="button-accent product-card__btn" type="button">
+                В корзину
+              </button>
+            </article>
+          </li>
+
+          <li class="exclusive-products__item swiper-slide">
+            <article class="product-card">
+              <img class="product-card__img" src="images/burgers/3.jpg" alt="Королевский чизбургер" width="140"
+                height="140">
+              <h3 class="product-card__text">
+                Королевский чизбургер
+              </h3>
+              <span class="product-card__price">
+                260 <span>грн</span>.
+              </span>
+              <button class="button-accent product-card__btn" type="button">
+                В корзину
+              </button>
+            </article>
+          </li>
+
+          <li class="exclusive-products__item swiper-slide">
+            <article class="product-card">
+              <img class="product-card__img" src="images/burgers/4.jpg" alt="Черный гамбургер" width="140" height="140">
+              <h3 class="product-card__text">
+                Черный гамбургер
+              </h3>
+              <span class="product-card__price">
+                199 <span>грн</span>.
+              </span>
+              <button class="button-accent product-card__btn" type="button">
+                В корзину
+              </button>
+            </article>
+          </li>
+
+          <li class="exclusive-products__item swiper-slide">
+            <article class="product-card">
+              <img class="product-card__img" src="images/burgers/1.jpg" alt="Чизбургер с листьями салата" width="140"
+                height="140">
+              <h3 class="product-card__text">
+                Чизбургер с листьями салата
+              </h3>
+              <span class="product-card__price">
+                160 <span>грн</span>.
+              </span>
+              <button class="button-accent product-card__btn" type="button">
+                В корзину
+              </button>
+            </article>
+          </li>
+
+          <li class="exclusive-products__item swiper-slide">
+            <article class="product-card">
+              <img class="product-card__img" src="images/burgers/2.jpg" alt="Бифбургер" width="140" height="140">
+              <h3 class="product-card__text">
+                Бифбургер
+              </h3>
+              <span class="product-card__price">
+                190 <span>грн</span>.
+              </span>
+              <button class="button-accent product-card__btn" type="button">
+                В корзину
+              </button>
+            </article>
+          </li>
+
+          <li class="exclusive-products__item swiper-slide">
+            <article class="product-card">
+              <img class="product-card__img" src="images/burgers/3.jpg" alt="Королевский чизбургер" width="140"
+                height="140">
+              <h3 class="product-card__text">
+                Королевский чизбургер
+              </h3>
+              <span class="product-card__price">
+                260 <span>грн</span>.
+              </span>
+              <button class="button-accent product-card__btn" type="button">
+                В корзину
+              </button>
+            </article>
+          </li>
+
+          <li class="exclusive-products__item swiper-slide">
+            <article class="product-card">
+              <img class="product-card__img" src="images/burgers/4.jpg" alt="Черный гамбургер" width="140" height="140">
+              <h3 class="product-card__text">
+                Черный гамбургер
+              </h3>
+              <span class="product-card__price">
+                199 <span>грн</span>.
+              </span>
+              <button class="button-accent product-card__btn" type="button">
+                В корзину
+              </button>
+            </article>
+          </li>
+
+          <li class="exclusive-products__item swiper-slide">
+            <article class="product-card">
+              <img class="product-card__img" src="images/burgers/1.jpg" alt="Чизбургер с листьями салата" width="140"
+                height="140">
+              <h3 class="product-card__text">
+                Чизбургер с листьями салата
+              </h3>
+              <span class="product-card__price">
+                160 <span>грн</span>.
+              </span>
+              <button class="button-accent product-card__btn" type="button">
+                В корзину
+              </button>
+            </article>
+          </li>
+
+          <li class="exclusive-products__item swiper-slide">
+            <article class="product-card">
+              <img class="product-card__img" src="images/burgers/2.jpg" alt="Бифбургер" width="140" height="140">
+              <h3 class="product-card__text">
+                Бифбургер
+              </h3>
+              <span class="product-card__price">
+                190 <span>грн</span>.
+              </span>
+              <button class="button-accent product-card__btn" type="button">
+                В корзину
+              </button>
+            </article>
+          </li>
+
+          <li class="exclusive-products__item swiper-slide">
+            <article class="product-card">
+              <img class="product-card__img" src="images/burgers/3.jpg" alt="Королевский чизбургер" width="140"
+                height="140">
+              <h3 class="product-card__text">
+                Королевский чизбургер
+              </h3>
+              <span class="product-card__price">
+                260 <span>грн</span>.
+              </span>
+              <button class="button-accent product-card__btn" type="button">
+                В корзину
+              </button>
+            </article>
+          </li>
+
+          <li class="exclusive-products__item swiper-slide">
+            <article class="product-card">
+              <img class="product-card__img" src="images/burgers/4.jpg" alt="Черный гамбургер" width="140" height="140">
+              <h3 class="product-card__text">
+                Черный гамбургер
+              </h3>
+              <span class="product-card__price">
+                199 <span>грн</span>.
+              </span>
+              <button class="button-accent product-card__btn" type="button">
+                В корзину
+              </button>
+            </article>
+          </li>
+        </ul>
+
+      </div>
+      <div class="exclusive-products__button-swiper">
+        <button class="exclusive-products__button swiper-button-right">
+          <svg>
+            <use xlink:href="images/sprite.svg#vector"></use>
+          </svg>
+        </button>
+        <button class="exclusive-products__button swiper-button-left">
+          <svg>
+            <use xlink:href="images/sprite.svg#vector"></use>
+          </svg>
+        </button>
+
+      </div>
+      <div class="exclusive-products__pagination">
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+
+
+  </div>
+</section>
 </main>
 <footer class="footer">
   <div class="container">
