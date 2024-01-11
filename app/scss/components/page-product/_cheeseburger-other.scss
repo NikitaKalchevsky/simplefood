@@ -14,10 +14,11 @@
 
   &__item {
     max-width: 210px;
+    padding: 5px;
 
     @include mq ("phone") {
       max-width: 170px;
-      padding: 5px;
+
     }
   }
 
