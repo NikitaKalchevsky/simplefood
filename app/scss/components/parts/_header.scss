@@ -105,8 +105,8 @@
   background-color: transparent;
   display: none;
 
-  @include mq("desktop") {
-    z-index: 2;
+  @include mq("tablet-2") {
+
     display: block;
     margin-left: 20px;
   }
@@ -187,7 +187,7 @@
     width: 100%;
   }
 
-  @include mq("desktop") {
+  @include mq("tablet-2") {
     position: absolute;
     left: 0;
     right: 0;
@@ -201,7 +201,7 @@
     height: 100vh;
 
     &.menu--active {
-      @include mq("desktop") {
+      @include mq("tablet-2") {
         display: block;
         transform: translateX(0);
         font-size: 30px;
@@ -253,7 +253,7 @@
   transition: padding 0.4s;
   @include flex-space-betwen;
 
-  @include mq("desktop") {
+  @include mq("tablet-2") {
     padding: 30px 0;
   }
 
@@ -277,7 +277,7 @@
     align-items: center;
     margin-right: 53px;
 
-    @include mq("desktop") {
+    @include mq("tablet-2") {
       display: none;
     }
   }
