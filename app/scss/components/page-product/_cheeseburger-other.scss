@@ -1,6 +1,10 @@
 .exclusive-products {
   &__title {
     margin-bottom: 60px;
+
+    @include mq ("phone") {
+      margin-bottom: 30px;
+    }
   }
 
   &__wrap {

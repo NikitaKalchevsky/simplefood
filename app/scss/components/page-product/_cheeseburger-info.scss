@@ -84,6 +84,9 @@
      width: 100%;
      padding-bottom: 60px;
 
+     @include mq ("phone") {
+       padding-bottom: 30px;
+     }
    }
 
 
@@ -185,11 +188,13 @@
    }
 
    &__info-text {
-     margin-bottom: 35px;
+     padding-bottom: 15px;
      font-weight: 400;
+     border-bottom: 1px solid #E4E4E4;
    }
 
    &__info-desc {
+     margin-top: 20px;
      margin-bottom: 20px;
      font-size: 16px;
      line-height: 1.6;
