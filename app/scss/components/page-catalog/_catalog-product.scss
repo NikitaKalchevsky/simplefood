@@ -7,6 +7,7 @@
 .lock-catalog {
   overflow: hidden;
   position: relative;
+  height: 100svh;
 
   &::after {
     content: '';
@@ -44,8 +45,8 @@
     &::before,
     &::after {
       @include pseudo;
-      right: 12px;
-      width: 18px;
+      left: 8px;
+      width: 60%;
       height: 1px;
       background-color: $title-color;
     }
