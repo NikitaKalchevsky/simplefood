@@ -63,36 +63,6 @@
   }
 }
 
-// .burger {
-//   padding: 10px;
-//   width: 44px;
-//   height: 44px;
-//   border: none;
-//   position: relative;
-//   display: none;
-
-//   @include mq("desktop") {
-//     z-index: 2;
-//     display: block;
-//     margin-left: 20px;
-//   }
-
-//   span {
-//     position: absolute;
-//     width: 30px;
-//     height: 2px;
-//     background-color: $dark;
-//     left: 7px;
-//   }
-
-//   span:nth-child(1) {
-//     transform: translateY(-10px);
-//   }
-
-//   span:nth-child(3) {
-//     transform: translateY(10px);
-//   }
-// }
 .burger {
   top: 10px;
   width: 30px;
@@ -106,7 +76,6 @@
   display: none;
 
   @include mq("tablet-2") {
-
     display: block;
     margin-left: 20px;
   }
