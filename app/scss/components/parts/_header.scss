@@ -118,7 +118,7 @@
     transform: translateY(-50%);
     width: 100%;
     height: 2px;
-    background-color: #000;
+    background-color: $title-color;
     transition: transform 0.3s ease-in-out;
   }
 
@@ -129,7 +129,7 @@
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #000;
+    background-color: $title-color;
     transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
   }
 
