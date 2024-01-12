@@ -20,6 +20,7 @@
      border-radius: 5px;
      box-shadow: 0 0 0 1px $silver-200;
 
+
      @include mq("desktop") {
        max-width: 510px;
      }

@@ -102,7 +102,6 @@
   &__top {
     display: flex;
     justify-content: space-between;
-
     padding-bottom: 50px;
   }
 
@@ -212,6 +211,13 @@
 
   @include mq("tablet") {
     padding: 25px 0;
+  }
+
+  .logo__img {
+    @include mq("tablet") {
+      width: 115px;
+      height: 23px;
+    }
   }
 
   .active {
