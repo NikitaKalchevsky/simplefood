@@ -5,9 +5,9 @@
 }
 
 .lock-catalog {
-  overflow: hidden;
+
   position: relative;
-  height: 100svh;
+  height: 100%;
 
   &::after {
     content: '';
@@ -17,6 +17,7 @@
     top: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
+
   }
 }
 
