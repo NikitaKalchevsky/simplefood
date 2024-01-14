@@ -134,7 +134,7 @@
   &__button {
     position: relative;
     display: flex;
-    border: 2px solid $gray;
+    border: 3px solid $gray;
     padding: 8px 13px;
     border-radius: 50%;
     position: absolute;
@@ -242,6 +242,7 @@
     line-height: 1.5;
     margin-bottom: 30px;
     font-style: italic;
+    @extend %rubik;
     @include line-clamp(5);
 
     @include mq ("desktop") {

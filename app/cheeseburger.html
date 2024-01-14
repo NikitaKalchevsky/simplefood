@@ -28,7 +28,6 @@
           </a>
           <button class="burger-close" type="button">
             <span class="sr-only">бургер меню сайта</span>
-            <span class="burger-close__line"></span>
           </button>
 
         </div>
@@ -44,7 +43,7 @@
             </a>
           </li>
           <li class=" menu__item">
-            <a class="menu__link button-secondary" href="#">
+            <a class="menu__link button-secondary" href="#footer">
               Контакты
             </a>
           </li>
@@ -134,7 +133,7 @@
               </a>
             </li>
             <li class=" menu-header__item">
-              <a class="menu-header__link button-secondary" href="#">
+              <a class="menu-header__link button-secondary" href="#footer">
                 Контакты
               </a>
             </li>
@@ -161,11 +160,14 @@
               </button>
             </li>
           </ul>
+          <!-- <button class="burger" type="button">
+            <span class="burger__line"></span>
+            <span class="sr-only">Открыть меню</span>
+          </button> -->
           <button class="burger" type="button">
             <span class="burger__line"></span>
             <span class="sr-only">Открыть меню</span>
           </button>
-
         </div>
       </nav>
     </div>
@@ -191,7 +193,7 @@
         </a>
       </li>
 
-      <li class="header-bottom__item">
+      <li class="header-bottom__item cheeseburger-hidearrow">
         <svg>
           <use xlink:href="images/sprite.svg#arrowmenu"></use>
         </svg>
@@ -214,8 +216,7 @@
         <ul class="cheeseburger__image swiper-wrapper ">
           <li data-fancybox="gallery" class="cheeseburger__slider-item swiper-slide carousel__slide"
             data-src="images/burgers/1.jpg">
-            <img class="cheeseburger__slider-img" src="images/burgers/1.jpg" alt="Чизбургер с листьями салата"
-              width="400" height="400">
+            <img class="cheeseburger__slider-img" src="images/burgers/1.jpg" alt="Чизбургер с листьями салата">
           </li>
 
           <li data-fancybox="gallery" class="cheeseburger__slider-item swiper-slide carousel__slide"
@@ -230,20 +231,22 @@
           </li>
         </ul>
 
-        <div class="cheeseburger__button-swiper">
+        <button class="cheeseburger__button-right cheeseburger__button--arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="32" viewBox="0 0 20 32" fill="none">
+            <path
+              d="M18.9641 14.9851L2.95082 0.392105C2.42535 -0.130702 1.57314 -0.130702 1.04767 0.392105C0.522196 0.914872 0.522196 1.76312 1.04767 2.28593L16.0954 16L1.049 29.7141C0.523529 30.2369 0.523529 31.0852 1.049 31.6079C1.57448 32.1307 2.42668 32.1307 2.95212 31.6079L18.9654 17.0149C19.2455 16.7362 19.3656 16.3668 19.3469 16.0014C19.3643 15.6346 19.2443 15.2652 18.9641 14.9851Z"
+              fill="#505050" />
+          </svg>
+        </button>
+        <button class="cheeseburger__button-left cheeseburger__button--arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="32" viewBox="0 0 20 32" fill="none">
+            <path
+              d="M18.9641 14.9851L2.95082 0.392105C2.42535 -0.130702 1.57314 -0.130702 1.04767 0.392105C0.522196 0.914872 0.522196 1.76312 1.04767 2.28593L16.0954 16L1.049 29.7141C0.523529 30.2369 0.523529 31.0852 1.049 31.6079C1.57448 32.1307 2.42668 32.1307 2.95212 31.6079L18.9654 17.0149C19.2455 16.7362 19.3656 16.3668 19.3469 16.0014C19.3643 15.6346 19.2443 15.2652 18.9641 14.9851Z"
+              fill="#505050" />
+          </svg>
+        </button>
 
-          <button class="cheeseburger__button-right">
-            <svg>
-              <use xlink:href="images/sprite.svg#vector"></use>
-            </svg>
-          </button>
-          <button class="cheeseburger__button-left">
-            <svg>
-              <use xlink:href="images/sprite.svg#vector"></use>
-            </svg>
-          </button>
 
-        </div>
 
       </div>
       <div class="cheeseburger__info">
@@ -257,8 +260,8 @@
         </p>
 
         <div class="cheeseburger__form">
-          <form class="cheeseburger__buy" action="">
-            <input class="cheeseburger__buy-num" type="number" value="1">
+          <form class="cheeseburger__buy" action="#">
+            <input class="cheeseburger__buy-num" type="number" value="1" min="1">
           </form>
           <button type="submit" class="cheeseburger__button button-accent">
             <svg class="cheeseburger__buy-btn">
@@ -378,7 +381,7 @@
                     <p class="comments__content-name">
                       Андрей
                     </p>
-                    <time class="comments__content-data" date="10-06-2021">
+                    <time class="comments__content-data" datetime="2021-06-10">
                       10.06.2021
                     </time>
                   </div>
@@ -397,7 +400,7 @@
                     <p class="comments__content-name">
                       Екатерина Белая
                     </p>
-                    <time class="comments__content-data" date="7-06-2021">
+                    <time class="comments__content-data" datetime="2021-06-07">
                       7.06.2021
                     </time>
                   </div>
@@ -411,11 +414,11 @@
               </blockquote>
             </div>
 
-            <h3 class="comments-form__title">
+            <h3 class="comments__subtitle">
               Оставить отзыв
             </h3>
 
-            <form class="comments-form action=" #">
+            <form class="comments-form" action="#">
               <div class="comments-form__label">
                 <span class="comments-form__label-title">Ваша оценка *</span>
                 <div class="star-nofix"></div>
@@ -423,25 +426,28 @@
 
               <div class="comments-form__input">
 
-                <label class="comments-form__input-label comments-form__input-texarea" for="">Ваш отзыв *
-                  <textarea class="comments-form__textarea" placeholder="Введите текст отзыва"></textarea>
+                <label class="comments-form__input-label comments-form__input-texarea" for="message">Ваш отзыв *
+                  <textarea class="comments-form__textarea" id="message" placeholder="Введите текст отзыва"></textarea>
                 </label>
 
                 <div class="comments-form__textbox">
-                  <label class="comments-form__input-label" for="">Имя
-
-                    <input class="comments-form__text" type="text" placeholder="Введите ваше имя">
+                  <label class="comments-form__input-label" for="username">
+                    Имя
+                    <input class="comments-form__text" id="username" type="text" name="name"
+                      placeholder="Введите ваше имя">
                   </label>
-                  <label class="comments-form__input-label" for="">Email *
 
-                    <input class="comments-form__text" type="text" placeholder="youremail@mail.com">
+                  <label class="comments-form__input-label" for="email">Email *
+                    <input class="comments-form__text" id="email" type="email" placeholder="youremail@mail.com"
+                      required>
                   </label>
                 </div>
               </div>
               <div class="comments-form__checked">
                 <div class="comments-form__checked-box">
-                  <input class="comments-form__checkbox" type="checkbox">
-                  <label class="comments-form__checkbox-label" for="">
+
+                  <input class="comments-form__checkbox" type="checkbox" id="checkbox" required>
+                  <label class="comments-form__checkbox-label" for="checkbox">
                     Сохранить моё имя, email и адрес сайта в этом браузере для последующих моих
                     комментариев.
                   </label>
@@ -683,7 +689,7 @@
   </div>
 </section>
 </main>
-<footer class="footer">
+<footer class="footer" id="footer">
   <div class="container">
     <div class="footer__top">
       <div class="footer__wrap">
@@ -706,73 +712,45 @@
       </div>
 
       <ul class="footer__items">
-        <li class="footer__item ">
+        <li class="footer__item">
           <a class="footer__item-link button-secondary" href="#">
             Как это работает
           </a>
-        </li>
-        <li class="footer__item ">
           <a class="footer__item-link button-secondary" href="#">
             Продукты
           </a>
-
-        </li>
-        <li class="footer__item ">
           <a class="footer__item-link button-secondary" href="#">
             Блюда
           </a>
-
-        </li>
-        <li class="footer__item ">
           <a class="footer__item-link button-secondary" href="#">
             Меню
           </a>
-
         </li>
-
-
-        <li class="footer__item">
+        <li class="footer__item ">
           <a class="footer__item-link button-secondary" href="#">
             О нас
           </a>
-        </li>
-        <li class="footer__item ">
           <a class="footer__item-link button-secondary" href="#">
             Новости
           </a>
-
-        </li>
-
-        <li class="footer__item ">
           <a class="footer__item-link button-secondary" href="#">
             Партнеры
           </a>
-
-        </li>
-        <li class="footer__item ">
           <a class="footer__item-link button-secondary" href="#">
             ЧаВо
           </a>
 
         </li>
-        <li class="footer__item">
+        <li class="footer__item ">
           <a class="footer__item-link button-secondary" href="#">
             Скачать приложение
           </a>
-        </li>
-        <li class="footer__item ">
           <a class="footer__item-link button-secondary" href="#">
             Блог
           </a>
-
-        </li>
-        <li class="footer__item ">
           <a class="footer__item-link button-secondary" href="#">
             Что нового?
           </a>
-
-        </li>
-        <li class="footer__item ">
           <a class="footer__item-link button-secondary" href="#">
             Карта сайта
           </a>

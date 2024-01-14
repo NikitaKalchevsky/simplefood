@@ -7,6 +7,10 @@
     max-width: 200px;
     margin-right: 70px;
 
+    @include mq("desktop") {
+      margin-right: 35px;
+    }
+
     @include mq ("tablet-2") {
       order: 1;
     }
@@ -42,20 +46,20 @@
     display: grid;
     grid-template-columns: auto auto auto;
 
-    grid-gap: 20px 70px;
+    grid-gap: 20px 74px;
     margin-right: 70px;
 
     @include mq("desktop") {
-      grid-template-columns: repeat(2, 1fr);
-      margin-right: 35px;
-      margin-top: 45px;
+      grid-gap: 20px 40px;
+      margin-right: 40px;
     }
 
     @include mq ("tablet-2") {
       order: 2;
+      margin-top: 45px;
     }
 
-    @include mq ("phone") {
+    @include mq ("tablet") {
       grid-template-columns: repeat(1, 1fr);
       margin-right: 0;
       width: 100%;
@@ -74,6 +78,8 @@
     @include line-clamp(1);
     transition: color 0.4s linear;
     width: 100%;
+
+
 
     &:hover {
       color: $orange-900;
@@ -151,9 +157,7 @@
     order: 1;
     margin-right: 30px;
   }
-}
 
-.social {
   &__list {
     margin-bottom: 15px;
   }
@@ -178,15 +182,12 @@
 
   &__item:not(:last-child) {
     margin-bottom: 15px;
-
   }
 
   &__item {
     display: flex;
     align-items: center;
   }
-
-
 
   &__elem {
     &:not(:last-child) {
@@ -196,6 +197,7 @@
 
   &__items {
     display: flex;
+
   }
 
   &__elem-link {

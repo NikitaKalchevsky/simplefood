@@ -18,7 +18,8 @@
 
   &__item {
     max-width: 210px;
-    padding: 5px;
+    padding: 2px;
+    box-sizing: border-box;
 
     @include mq ("phone") {
       max-width: 170px;

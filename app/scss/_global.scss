@@ -8,6 +8,10 @@ body {
   min-height: 100svh;
 }
 
+.hidearrow {
+  display: none;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -29,6 +33,59 @@ body {
 
 .section {
   padding-bottom: clamp(2.5rem, 0.682rem + 9.09vw, 7.5rem);
+}
+
+.lock {
+  overflow: hidden;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 20;
+  }
+}
+
+.burger {
+  width: 44px;
+  height: 44px;
+  position: relative;
+  z-index: 5;
+  margin-left: 20px;
+  display: none;
+
+  @include mq("tablet-2") {
+    display: block;
+  }
+
+  &__line {
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: $title-color;
+    position: absolute;
+    left: 5px;
+
+    &::before,
+    &::after {
+      @include pseudo;
+      background-color: $title-color;
+      width: 30px;
+      height: 2px;
+      left: 0;
+      transform: translateY(10px);
+    }
+
+    &::before {
+      transform: translateY(-10px);
+    }
+  }
+
 }
 
 .button-accent {

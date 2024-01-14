@@ -107,7 +107,6 @@
        height: 300px;
        margin-left: 0;
      }
-
    }
 
    &__button-left {
@@ -139,6 +138,8 @@
      }
    }
 
+   &__button--arrow {}
+
    &__button-right {
      position: absolute;
      z-index: 2;
@@ -169,6 +170,14 @@
 
    &__title {
      margin-bottom: 30px;
+
+     @include mq("desktop") {
+       font-size: 30px;
+     }
+
+     @include mq("tablet") {
+       font-size: 24px;
+     }
    }
 
    &__awards {
@@ -204,17 +213,44 @@
    }
 
    &__buy-btn {
-     margin-right: 5px;
+     margin-right: 15px;
      width: 16px;
      height: 16px;
      filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(97deg) brightness(102%) contrast(107%);
    }
 
    &__button {
+     display: flex;
      font-size: 14px;
      margin-left: 20px;
      height: 44px;
-     width: 247px;
+     max-width: 247px;
+     width: 100%;
+     padding: 13px 33px;
+
+     &:hover {
+       background: $white;
+
+       svg {
+         filter: $orange-btn;
+       }
+     }
+
+     &:focus {
+       background-color: $orange-400;
+
+       svg {
+         filter: $orange-btn;
+       }
+     }
+
+     &:active {
+       box-shadow: transparent;
+
+       svg {
+         filter: $orange-btn;
+       }
+     }
 
      @include mq("desktop") {
        margin-left: 0;
@@ -225,7 +261,7 @@
    &__form {
      display: flex;
 
-     @include mq("desktop") {
+     @include mq("tablet-2") {
        flex-direction: column;
      }
    }

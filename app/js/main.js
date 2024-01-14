@@ -220,7 +220,7 @@ window.addEventListener("DOMContentLoaded", () => {
     },
   });
 
-  resizableSwiper("(max-width: 2500px)", ".cheeseburger__slider", {
+  resizableSwiper("(max-width: 5000px)", ".cheeseburger__slider", {
     slidesPerView: 1,
     spaceBetween: 0,
     direction: "horizontal",

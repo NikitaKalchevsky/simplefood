@@ -82,7 +82,7 @@
                     <p class="comments__content-name">
                       Андрей
                     </p>
-                    <time class="comments__content-data" date="10-06-2021">
+                    <time class="comments__content-data" datetime="2021-06-10">
                       10.06.2021
                     </time>
                   </div>
@@ -101,7 +101,7 @@
                     <p class="comments__content-name">
                       Екатерина Белая
                     </p>
-                    <time class="comments__content-data" date="7-06-2021">
+                    <time class="comments__content-data" datetime="2021-06-07">
                       7.06.2021
                     </time>
                   </div>
@@ -115,11 +115,11 @@
               </blockquote>
             </div>
 
-            <h3 class="comments-form__title">
+            <h3 class="comments__subtitle">
               Оставить отзыв
             </h3>
 
-            <form class="comments-form action=" #">
+            <form class="comments-form" action="#">
               <div class="comments-form__label">
                 <span class="comments-form__label-title">Ваша оценка *</span>
                 <div class="star-nofix"></div>
@@ -127,25 +127,28 @@
 
               <div class="comments-form__input">
 
-                <label class="comments-form__input-label comments-form__input-texarea" for="">Ваш отзыв *
-                  <textarea class="comments-form__textarea" placeholder="Введите текст отзыва"></textarea>
+                <label class="comments-form__input-label comments-form__input-texarea" for="message">Ваш отзыв *
+                  <textarea class="comments-form__textarea" id="message" placeholder="Введите текст отзыва"></textarea>
                 </label>
 
                 <div class="comments-form__textbox">
-                  <label class="comments-form__input-label" for="">Имя
-
-                    <input class="comments-form__text" type="text" placeholder="Введите ваше имя">
+                  <label class="comments-form__input-label" for="username">
+                    Имя
+                    <input class="comments-form__text" id="username" type="text" name="name"
+                      placeholder="Введите ваше имя">
                   </label>
-                  <label class="comments-form__input-label" for="">Email *
 
-                    <input class="comments-form__text" type="text" placeholder="youremail@mail.com">
+                  <label class="comments-form__input-label" for="email">Email *
+                    <input class="comments-form__text" id="email" type="email" placeholder="youremail@mail.com"
+                      required>
                   </label>
                 </div>
               </div>
               <div class="comments-form__checked">
                 <div class="comments-form__checked-box">
-                  <input class="comments-form__checkbox" type="checkbox">
-                  <label class="comments-form__checkbox-label" for="">
+
+                  <input class="comments-form__checkbox" type="checkbox" id="checkbox" required>
+                  <label class="comments-form__checkbox-label" for="checkbox">
                     Сохранить моё имя, email и адрес сайта в этом браузере для последующих моих
                     комментариев.
                   </label>
