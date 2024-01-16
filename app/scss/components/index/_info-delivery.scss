@@ -1,10 +1,18 @@
 .info-delivery {
+  @include mq("phone") {
+    padding-bottom: 77px;
+  }
+
   &__box {
     display: flex;
     padding: 0 70px;
 
     @include mq("desktop") {
       align-items: center;
+    }
+
+    @include mq("phone") {
+      padding: 0;
     }
   }
 
@@ -26,16 +34,31 @@
       opacity: 0.4;
       position: absolute;
       right: 0;
+      max-width: 348px;
+      height: 462px;
+    }
+
+    @include mq ("phone") {
+      left: 10px;
+      margin-top: 30px;
     }
   }
 
   &__title {
     margin-top: 67px;
     margin-bottom: 30px;
+
+    @include mq ("phone") {
+      margin-top: 20px;
+    }
   }
 
   &__inner {
     max-width: 470px;
+
+    @include mq("phone") {
+      max-width: 462px;
+    }
   }
 
   &__description {
@@ -45,7 +68,12 @@
     font-weight: 400;
     line-height: 1.5;
     opacity: 0.9;
-    @include line-clamp(3);
+    @include line-clamp(4);
+
+    @include mq ("phone") {
+      font-size: 16px;
+      margin-bottom: 35px;
+    }
   }
 
   &__item {
@@ -55,7 +83,11 @@
   &__list {
     display: flex;
     flex-direction: column;
-    margin-bottom: 30px;
+    margin-bottom: 38px;
+
+    @include mq ("phone") {
+      margin-bottom: 20px;
+    }
   }
 
   &__item {
@@ -71,6 +103,10 @@
 
     &:not(:last-child) {
       margin-bottom: 20px;
+
+      @include mq ("phone") {
+        margin-bottom: 15px;
+      }
     }
 
     &::before {
@@ -80,6 +116,10 @@
       height: 34px;
       @include image-bg;
       margin-right: 30px;
+
+      @include mq ("phone") {
+        margin-right: 10px;
+      }
     }
 
     &--stopwatch::before {
@@ -95,6 +135,12 @@
     &--shop::before {
       background-image: url("../images/sprite.svg#shop_1");
       filter: invert(43%) sepia(99%) saturate(7445%) hue-rotate(351deg) brightness(99%) contrast(102%);
+    }
+  }
+
+  &__link {
+    @include mq ("phone") {
+      padding: 12px 32px;
     }
   }
 }

@@ -1,4 +1,4 @@
-.cheeseburger-tabs {
+.reviews-tabs {
   padding-top: 30px;
 
   &__box {
@@ -14,19 +14,37 @@
     overflow-x: auto;
     white-space: nowrap;
     margin-bottom: 30px;
-    padding: 5px 0;
+    padding: 4px 0;
+  }
+
+  &__text {
+    line-height: 1.5;
+
+
+    @include mq("phone") {
+      font-size: 16px;
+      max-width: 342px;
+    }
   }
 
   &__text:not(:last-child) {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
   }
 
   &__top-item {
     font-size: 24px;
     color: $title-color;
 
+    @include mq("phone") {
+      font-size: 20px;
+    }
+
     &:not(:last-child) {
       margin-right: 60px;
+
+      @include mq("phone") {
+        margin-right: 30px;
+      }
     }
 
     &--active {
@@ -37,7 +55,7 @@
   &__content-item {
     display: none;
 
-    &.cheeseburger-tabs__content-item--active {
+    &.reviews-tabs__content-item--active {
       display: block;
     }
   }
@@ -52,6 +70,10 @@
     span {
       font-weight: 400;
     }
+
+    @include mq("phone") {
+      font-size: 16px;
+    }
   }
 
   &__content-description:not(:last-child) {
@@ -64,6 +86,10 @@
     font-size: 24px;
     font-weight: 500;
     line-height: 1.2;
+
+    @include mq("phone") {
+      font-size: 20px;
+    }
   }
 
   &__content {
@@ -73,6 +99,9 @@
     padding-bottom: 20px;
     padding-top: 25px;
 
+    @include mq("phone") {
+      font-size: 16px;
+    }
   }
 
   &__content-border {
@@ -88,27 +117,42 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 26px;
+
+    @include mq("phone") {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__content-img {
     width: 70px;
     height: 70px;
     margin-right: 25px;
+
+    @include mq("phone") {
+      margin-bottom: 15px;
+    }
   }
 
   &__content-name {
     margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.3;
   }
 
   &__connect-text {
     position: relative;
-
   }
 
   &__subtitle {
     margin-bottom: 30px;
     font-weight: 500;
     font-size: 24px;
+
+    @include mq("phone") {
+      font-size: 20px;
+    }
   }
 }
 
@@ -191,6 +235,7 @@
   &__checked-btn {
     width: 208px;
     padding: 12px 0;
+    font-size: 18px;
   }
 
   &__checkbox-label {

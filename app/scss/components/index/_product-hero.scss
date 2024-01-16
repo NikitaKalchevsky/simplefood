@@ -15,6 +15,10 @@
     transition: color 0.4s,
       box-shadow 0.4s,
       text-shadow 0.4s;
+
+    @include mq("phone") {
+      font-size: 20px;
+    }
   }
 }
 
@@ -26,6 +30,12 @@
 
   @include mq("desktop") {
     padding: 20px 0;
+    margin-bottom: 30px;
+  }
+
+  @include mq("phone") {
+    padding: 0;
+    margin-bottom: 23px;
   }
 
   &__btn {
@@ -35,15 +45,20 @@
     padding: 13px 32px;
     border-radius: 5px;
     font-size: 20px;
+    box-shadow: 0 0 0 1px $silver-200;
     transition: background-color 0.4s,
       filter 0.4s,
       box-shadow 0.4s ease-in-out;
 
     @include mq("tablet") {
-      padding: 12px 16px;
+      padding: 12px 20px;
       font-size: 18px;
     }
 
+    @include mq("phone") {
+      font-size: 14px;
+      padding: 12px 14px;
+    }
 
     &.mixitup-control-active {
       color: $white;
@@ -89,7 +104,7 @@
   }
 
   &__item {
-    padding: 5px;
+    padding: 5px 0;
   }
 
   &__item:not(:last-child) {
@@ -114,7 +129,11 @@
 
   @include mq("tablet") {
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 5px;
+    grid-gap: 10px 5px;
+  }
+
+  @include mq("phone") {
+    margin-bottom: 30px;
   }
 }
 

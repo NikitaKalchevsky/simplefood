@@ -6,7 +6,19 @@
   }
 
   &__title {
-    margin-bottom: 20px;
+    margin-bottom: 50px;
+
+    @include mq("tablet") {
+      margin-bottom: 20px;
+    }
+
+    @include mq("phone") {
+      text-align: center;
+    }
+  }
+
+  &__item-text {
+    margin-bottom: 0;
   }
 
   &__container {

@@ -1,4 +1,8 @@
 .hero-content {
+  @include mq("phone") {
+    padding-bottom: 22px;
+  }
+
   &__box {
     @include flex-space-betwen;
 
@@ -22,6 +26,10 @@
       width: 100%;
       padding-bottom: 40px;
     }
+
+    @include mq("phone") {
+      padding-bottom: 0;
+    }
   }
 
   &__title {
@@ -38,6 +46,10 @@
 
     @include mq("tablet") {
       font-size: 40px;
+    }
+
+    @include mq("phone") {
+      margin-top: 17px;
     }
   }
 
@@ -72,7 +84,7 @@
     }
 
     @include mq("tablet") {
-      z-index: 1;
+      z-index: -1;
       position: absolute;
       right: 0;
       background-size: cover;
@@ -86,11 +98,16 @@
     @include mq("phone") {
       max-width: 250px;
       height: 280px;
-      right: 0;
+      right: 20px;
+
     }
   }
 
   &__button a:not(:last-child) {
     margin-right: 34px;
+
+    @include mq("phone") {
+      margin-right: 25px;
+    }
   }
 }

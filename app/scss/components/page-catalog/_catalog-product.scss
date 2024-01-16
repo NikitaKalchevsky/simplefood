@@ -137,12 +137,6 @@
     padding: 15px;
   }
 
-  &__label {
-    display: flex;
-    align-items: center;
-    margin-right: 12px;
-  }
-
   &__category {
     position: relative;
     display: flex;
@@ -166,28 +160,44 @@
     }
   }
 
-  &__item {
-    font-size: 18px;
-    max-width: 100%;
-    width: 100%;
-    margin: 0 auto;
+  &__label {
+    display: flex;
+    align-items: center;
+    margin-right: 12px;
+  }
 
+  &__element {
+    font-size: 18px;
+
+    // &:not(:last-child) {
+    //   margin-bottom: 12px;
+    // }
+  }
+
+  &__elem {
+    font-size: 18px;
 
     &:not(:last-child) {
       margin-bottom: 12px;
     }
   }
 
+  &__item {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+  }
+
   &__item-link {
     text-decoration: none;
   }
-
-
 
   &__caption {
     margin-bottom: 40px;
     font-size: 24px;
     font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 0.72px;
   }
 
   &__food {
@@ -198,6 +208,7 @@
 
     @include mq("desktop") {
       grid-template-columns: repeat(3, 1fr);
+
     }
 
     @include mq("tablet-2") {
@@ -211,7 +222,7 @@
   }
 
   &__checkbox-text {
-    margin-left: 14px;
+    margin-left: 12px;
   }
 
   &__checkbox-text {
@@ -227,9 +238,23 @@
   }
 
   &__checkbox {
-
+    margin: 0;
+    position: relative;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    background-color: $white2;
+    border-radius: 5px;
+    box-shadow: 1px solid $silver-200;
     transition: border 0.4s,
       color 0.4s ease-in-out;
+
+    &::before {
+      @include pseudo;
+      width: 12px;
+      height: 11px;
+      transform: translate(50%, 50%);
+    }
 
     &:hover {
       border: 1px solid $orange-900;
@@ -241,21 +266,8 @@
     }
   }
 
-  &__checkbox {
-    position: relative;
-    appearance: none;
-    width: 24px;
-    height: 24px;
-    background-color: $white2;
-    border-radius: 5px;
-    box-shadow: 1px solid $silver-200;
-
-    &::before {
-      @include pseudo;
-      width: 12px;
-      height: 11px;
-      transform: translate(50%, 50%);
-    }
+  &__checkbox:checked {
+    border: 1px solid $title-color;
   }
 
   &__checkbox:checked::before {
@@ -307,8 +319,6 @@
     }
   }
 
-
-
   &__swiper-btn {
     background-color: $orange-400;
     border-radius: 3px;
@@ -340,8 +350,8 @@
     }
   }
 
-  &__swiper-item {
-    padding: 0 7px;
+  &__swiper-item:not(:last-child) {
+    margin-right: 7px;
   }
 
   &__swiper {
@@ -447,6 +457,7 @@
 }
 
 .irs--round .irs-handle {
+
   border-radius: 50%;
   width: 18px;
   height: 18px;

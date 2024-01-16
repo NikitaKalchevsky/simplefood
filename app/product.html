@@ -160,10 +160,6 @@
               </button>
             </li>
           </ul>
-          <!-- <button class="burger" type="button">
-            <span class="burger__line"></span>
-            <span class="sr-only">Открыть меню</span>
-          </button> -->
           <button class="burger" type="button">
             <span class="burger__line"></span>
             <span class="sr-only">Открыть меню</span>
@@ -182,18 +178,18 @@
           Главная
         </a>
       </li>
-      <li class="header-bottom__item cheeseburger-hide">
+      <li class="header-bottom__item product-hide">
         <svg>
           <use xlink:href="images/sprite.svg#arrowmenu"></use>
         </svg>
       </li>
-      <li class="header-bottom__item cheeseburger-hide">
+      <li class="header-bottom__item product-hide">
         <a class="header-bottom__link catalog-hide" href="catalog.html">
           Каталог товаров
         </a>
       </li>
 
-      <li class="header-bottom__item cheeseburger-hidearrow">
+      <li class="header-bottom__item product-hidearrow">
         <svg>
           <use xlink:href="images/sprite.svg#arrowmenu"></use>
         </svg>
@@ -206,39 +202,39 @@
   </div>
 </div>
 <main class="main ">
-  <section class="cheeseburger">
+  <section class="product">
   <div class="container">
-    <div class="cheeseburger__container ">
+    <div class="product__container ">
       <h1 class="sr-only">
         Страница с детальным описанием товара
       </h1>
-      <div class="cheeseburger__slider swiper carousel" id="myCarousel">
-        <ul class="cheeseburger__image swiper-wrapper ">
-          <li data-fancybox="gallery" class="cheeseburger__slider-item swiper-slide carousel__slide"
+      <div class="product__slider swiper carousel" id="myCarousel">
+        <ul class="product__image swiper-wrapper ">
+          <li data-fancybox="gallery" class="product__slider-item swiper-slide carousel__slide"
             data-src="images/burgers/1.jpg">
-            <img class="cheeseburger__slider-img" src="images/burgers/1.jpg" alt="Чизбургер с листьями салата">
+            <img class="product__slider-img" src="images/burgers/1.jpg" alt="Чизбургер с листьями салата">
           </li>
 
-          <li data-fancybox="gallery" class="cheeseburger__slider-item swiper-slide carousel__slide"
+          <li data-fancybox="gallery" class="product__slider-item swiper-slide carousel__slide"
             data-src="images/burgers/3.jpg">
-            <img class="cheeseburger__slider-img" src="images/burgers/3.jpg" alt="Чизбургер с листьями салата"
-              width="400" height="400">
+            <img class="product__slider-img" src="images/burgers/3.jpg" alt="Чизбургер с листьями салата" width="400"
+              height="400">
           </li>
-          <li data-fancybox="gallery" class="cheeseburger__slider-item swiper-slide carousel__slide"
+          <li data-fancybox="gallery" class="product__slider-item swiper-slide carousel__slide"
             data-src="images/burgers/4.jpg">
-            <img class="cheeseburger__slider-img" src="images/burgers/4.jpg" alt="Чизбургер с листьями салата"
-              width="400" height="400">
+            <img class="product__slider-img" src="images/burgers/4.jpg" alt="Чизбургер с листьями салата" width="400"
+              height="400">
           </li>
         </ul>
 
-        <button class="cheeseburger__button-right cheeseburger__button--arrow">
+        <button class="product__button-right product__button--arrow">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="32" viewBox="0 0 20 32" fill="none">
             <path
               d="M18.9641 14.9851L2.95082 0.392105C2.42535 -0.130702 1.57314 -0.130702 1.04767 0.392105C0.522196 0.914872 0.522196 1.76312 1.04767 2.28593L16.0954 16L1.049 29.7141C0.523529 30.2369 0.523529 31.0852 1.049 31.6079C1.57448 32.1307 2.42668 32.1307 2.95212 31.6079L18.9654 17.0149C19.2455 16.7362 19.3656 16.3668 19.3469 16.0014C19.3643 15.6346 19.2443 15.2652 18.9641 14.9851Z"
               fill="#505050" />
           </svg>
         </button>
-        <button class="cheeseburger__button-left cheeseburger__button--arrow">
+        <button class="product__button-left product__button--arrow">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="32" viewBox="0 0 20 32" fill="none">
             <path
               d="M18.9641 14.9851L2.95082 0.392105C2.42535 -0.130702 1.57314 -0.130702 1.04767 0.392105C0.522196 0.914872 0.522196 1.76312 1.04767 2.28593L16.0954 16L1.049 29.7141C0.523529 30.2369 0.523529 31.0852 1.049 31.6079C1.57448 32.1307 2.42668 32.1307 2.95212 31.6079L18.9654 17.0149C19.2455 16.7362 19.3656 16.3668 19.3469 16.0014C19.3643 15.6346 19.2443 15.2652 18.9641 14.9851Z"
@@ -249,32 +245,32 @@
 
 
       </div>
-      <div class="cheeseburger__info">
-        <h2 class="cheeseburger__title title">
+      <div class="product__info">
+        <h2 class="product__title title">
           Чизбургер с листьями салата
         </h2>
-        <div class="star cheeseburger__awards" data-rateyo-rating="4"></div>
+        <div class="star product__awards" data-rateyo-rating="4"></div>
 
-        <p class="cheeseburger__info-price">
+        <p class="product__info-price">
           160 грн.
         </p>
 
-        <div class="cheeseburger__form">
-          <form class="cheeseburger__buy" action="#">
-            <input class="cheeseburger__buy-num" type="number" value="1" min="1">
+        <div class="product__form">
+          <form class="product__buy" action="#">
+            <input class="product__buy-num" type="number" value="1" min="1">
           </form>
-          <button type="submit" class="cheeseburger__button button-accent">
-            <svg class="cheeseburger__buy-btn">
+          <button type="submit" class="product__button button-accent">
+            <svg class="product__buy-btn">
               <use xlink:href="images/sprite.svg#carticon"></use>
             </svg>
             Добавить в корзину
           </button>
         </div>
 
-        <h3 class="cheeseburger__info-text">
+        <h3 class="product__info-text">
           Доставка и оплата
         </h3>
-        <ul class="cheeseburger__info-desc">
+        <ul class="product__info-desc">
           <li>
             Минимальная сумма заказа — 160 грн
           </li>
@@ -289,7 +285,7 @@
           </li>
 
         </ul>
-        <a href="#" class="button-secondary">
+        <a href="#" class="button-secondary product__info-btn">
           Подробнее
         </a>
       </div>
@@ -297,26 +293,26 @@
   </div>
 
 </section>
-  <section class="cheeseburger-tabs section">
+  <section class="reviews-tabs section">
   <div class="container">
-    <div class="cheeseburger-tabs__box">
+    <div class="reviews-tabs__box">
 
-      <div class="cheeseburger-tabs__top">
+      <div class="reviews-tabs__top">
 
-        <a class="cheeseburger-tabs__top-item cheeseburger-tabs__top-item--active" href="#tab-1">
+        <a class="reviews-tabs__top-item reviews-tabs__top-item--active" href="#tab-1">
           Описание
         </a>
-        <a class="cheeseburger-tabs__top-item" href="#tab-2">
+        <a class="reviews-tabs__top-item" href="#tab-2">
           Характеристики
         </a>
-        <a class="cheeseburger-tabs__top-item " href="#tab-3">
+        <a class="reviews-tabs__top-item " href="#tab-3">
           Отзывы (2)
         </a>
       </div>
 
-      <div class="cheeseburger-tabs__content">
-        <ul class="cheeseburger-tabs__content-item cheeseburger-tabs__content-item--active" id="tab-1">
-          <li class="cheeseburger-tabs__text">
+      <div class="reviews-tabs__content">
+        <ul class="reviews-tabs__content-item reviews-tabs__content-item--active" id="tab-1">
+          <li class="reviews-tabs__text">
             <p>
               Рубленый бифштекс из натуральной говядины на карамелизованной булочке, с ломтиком сыра «Чеддер»,
               кетчупом,
@@ -324,41 +320,41 @@
               луком и маринованными огурчиками.
             </p>
           </li>
-          <li class="cheeseburger-tabs__text">
+          <li class="reviews-tabs__text">
             <p>
               Аллергены: Глютен, Молоко, Горчица, Может содержать сою, яйцо, следы кунжута
             </p>
           </li>
-          <li class="cheeseburger-tabs__text">
+          <li class="reviews-tabs__text">
             <p>
               Внешний вид товара может отличаться от изображений, представленных на сайте.
             </p>
           </li>
         </ul>
 
-        <ul class="cheeseburger-tabs__content-item" id="tab-2">
-          <li class="cheeseburger-tabs__content-description">
+        <ul class="reviews-tabs__content-item" id="tab-2">
+          <li class="reviews-tabs__content-description">
             <p>Диаметр:
               <span>
                 20 см
               </span>
             </p>
           </li>
-          <li class="cheeseburger-tabs__content-description">
+          <li class="reviews-tabs__content-description">
             <p>Вес:
               <span>
                 300 гр
               </span>
             </p>
           </li>
-          <li class="cheeseburger-tabs__content-description">
+          <li class="reviews-tabs__content-description">
             <p>Калорийность (на 100г):
               <span>
                 295 ккал
               </span>
             </p>
           </li>
-          <li class="cheeseburger-tabs__content-description">
+          <li class="reviews-tabs__content-description">
             <p>Срок хранения:
               <span>
                 до 3 дней
@@ -367,7 +363,7 @@
           </li>
         </ul>
 
-        <div class="cheeseburger-tabs__content-item" id="tab-3">
+        <div class="reviews-tabs__content-item" id="tab-3">
           <div class="comments">
             <h3 class="comments__title">
               Мнения наших клиентов

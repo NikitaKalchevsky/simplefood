@@ -1,6 +1,6 @@
 (function ($) {
   $(function () {
-    $(".select-style, .cheeseburger__buy-num").styler();
+    $(".select-style, .product__buy-num").styler();
   });
 })(jQuery);
 
@@ -8,8 +8,8 @@ var $range = $(".js-range-slider"),
   $inputFrom = $(".js-input-from"),
   $inputTo = $(".js-input-to"),
   instance,
-  min = 0,
-  max = 1200,
+  min = 60,
+  max = 1100,
   from = 0,
   to = 0;
 
@@ -83,17 +83,15 @@ $inputTo.on("input", function () {
   });
 });
 //click tabs
-$(".cheeseburger-tabs__top-item").on("click", function (e) {
+$(".reviews-tabs__top-item").on("click", function (e) {
   e.preventDefault();
-  $(".cheeseburger-tabs__top-item").removeClass(
-    "cheeseburger-tabs__top-item--active"
-  );
-  $(this).addClass("cheeseburger-tabs__top-item--active");
+  $(".reviews-tabs__top-item").removeClass("reviews-tabs__top-item--active");
+  $(this).addClass("reviews-tabs__top-item--active");
 
-  $(".cheeseburger-tabs__content-item").removeClass(
-    "cheeseburger-tabs__content-item--active"
+  $(".reviews-tabs__content-item").removeClass(
+    "reviews-tabs__content-item--active"
   );
-  $($(this).attr("href")).addClass("cheeseburger-tabs__content-item--active");
+  $($(this).attr("href")).addClass("reviews-tabs__content-item--active");
 });
 
 //star rate
@@ -220,14 +218,14 @@ window.addEventListener("DOMContentLoaded", () => {
     },
   });
 
-  resizableSwiper("(max-width: 5000px)", ".cheeseburger__slider", {
+  resizableSwiper("(max-width: 15000px)", ".product__slider", {
     slidesPerView: 1,
     spaceBetween: 0,
     direction: "horizontal",
     speed: 700,
     navigation: {
-      nextEl: ".cheeseburger__button-right",
-      prevEl: ".cheeseburger__button-left",
+      nextEl: ".product__button-right",
+      prevEl: ".product__button-left",
     },
     pagination: {
       el: ".swiper-pagination4",
@@ -235,7 +233,7 @@ window.addEventListener("DOMContentLoaded", () => {
     },
   });
 
-  resizableSwiper("(max-width: 5000px)", ".reviews__slider", {
+  resizableSwiper("(max-width: 15000px)", ".reviews__slider", {
     direction: "horizontal",
     speed: 700,
     navigation: {
@@ -248,7 +246,7 @@ window.addEventListener("DOMContentLoaded", () => {
     },
   });
 
-  resizableSwiper("(max-width: 5000px)", ".exclusive-products__swiper", {
+  resizableSwiper("(max-width: 15000px)", ".exclusive-products__swiper", {
     direction: "horizontal",
     speed: 700,
     navigation: {

@@ -4,11 +4,16 @@
 
     @include mq ("phone") {
       margin-bottom: 30px;
+      font-size: 20px;
     }
   }
 
   &__wrap {
     position: relative;
+
+    @include mq("phone") {
+      padding-bottom: 30px;
+    }
   }
 
   &__box {
@@ -38,10 +43,11 @@
 
   .swiper-button-right {
     position: absolute;
-    transform: translateX(72px);
+    transform: translateX(87px);
   }
 
   .swiper-button-left {
+    left: 27px;
     position: absolute;
     transition: border-color 0.4s,
       opacity 0.4s,
@@ -55,7 +61,7 @@
 
   &__button {
     display: flex;
-    border: 2px solid $gray;
+    border: 3px solid $gray;
     padding: 8px 13px;
     border-radius: 50%;
     cursor: pointer;
@@ -107,6 +113,11 @@
 
     @include mq ("tablet") {
       display: block;
+    }
+
+    @include mq("phone") {
+      left: 34%;
+
     }
   }
 
