@@ -42,9 +42,9 @@
     &:not(:last-child) {
       margin-right: 60px;
 
-      // @include mq("phone") {
-      //   margin-right: 30px;
-      // }
+      @include mq("phone") {
+        margin-right: 30px;
+      }
     }
 
     &--active {
