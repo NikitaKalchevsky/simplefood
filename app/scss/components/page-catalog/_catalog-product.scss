@@ -168,10 +168,6 @@
 
   &__element {
     font-size: 18px;
-
-    // &:not(:last-child) {
-    //   margin-bottom: 12px;
-    // }
   }
 
   &__elem {
@@ -361,6 +357,11 @@
 
   &__filter-sort {
     margin-right: 15px;
+
+    @include mq ("phone") {
+      margin-right: 10px;
+    }
+
   }
 
   .jq-selectbox {
@@ -411,6 +412,10 @@
       background: $white;
       border-radius: 3px;
       transition: border-color 0.4s, color 0.4s ease-in-out;
+
+      @include mq ("phone") {
+        padding: 15px 41px 15px 10px;
+      }
 
       &:hover {
         border-radius: 3px;
