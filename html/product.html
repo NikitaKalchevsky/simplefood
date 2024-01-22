@@ -1,0 +1,17 @@
+@include('components/parts/_head.html',{
+"pageTitle": "Чизбургер с листьями салата"
+})
+@include('components/parts/_header.html',{
+"activeclasdishess": "", "catalog": "catalog.html"
+})
+@include('components/parts/_header-bottom-menu.html',{
+"chesburgerlink22": "Чизбургер с листьями салата", "hide": "product-hide"
+})
+<main class="main ">
+  @include('components/page-product/_product-info.html')
+  @include('components/page-product/_product-reviews.html')
+  @include('components/page-product/_product-other.html')
+</main>
+@include('components/parts/_footer.html')
+@include('components/parts/_footer-bottom.html')
+@include('components/parts/_footer-scripts.html')

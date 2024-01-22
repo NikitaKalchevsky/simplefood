@@ -1,0 +1,91 @@
+<section class="product">
+  <div class="container">
+    <div class="product__container ">
+      <h1 class="sr-only">
+        Страница с детальным описанием товара
+      </h1>
+      <div class="product__slider swiper carousel" id="myCarousel">
+        <ul class="product__image swiper-wrapper ">
+          <li data-fancybox="gallery" class="product__slider-item swiper-slide carousel__slide"
+            data-src="images/burgers/1.jpg">
+            <img class="product__slider-img" src="images/burgers/1.jpg" alt="Чизбургер с листьями салата">
+          </li>
+
+          <li data-fancybox="gallery" class="product__slider-item swiper-slide carousel__slide"
+            data-src="images/burgers/3.jpg">
+            <img class="product__slider-img" src="images/burgers/3.jpg" alt="Чизбургер с листьями салата" width="400"
+              height="400">
+          </li>
+          <li data-fancybox="gallery" class="product__slider-item swiper-slide carousel__slide"
+            data-src="images/burgers/4.jpg">
+            <img class="product__slider-img" src="images/burgers/4.jpg" alt="Чизбургер с листьями салата" width="400"
+              height="400">
+          </li>
+        </ul>
+
+        <button class="product__button-right product__button--arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="32" viewBox="0 0 20 32" fill="none">
+            <path
+              d="M18.9641 14.9851L2.95082 0.392105C2.42535 -0.130702 1.57314 -0.130702 1.04767 0.392105C0.522196 0.914872 0.522196 1.76312 1.04767 2.28593L16.0954 16L1.049 29.7141C0.523529 30.2369 0.523529 31.0852 1.049 31.6079C1.57448 32.1307 2.42668 32.1307 2.95212 31.6079L18.9654 17.0149C19.2455 16.7362 19.3656 16.3668 19.3469 16.0014C19.3643 15.6346 19.2443 15.2652 18.9641 14.9851Z"
+              fill="#505050" />
+          </svg>
+        </button>
+        <button class="product__button-left product__button--arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="32" viewBox="0 0 20 32" fill="none">
+            <path
+              d="M18.9641 14.9851L2.95082 0.392105C2.42535 -0.130702 1.57314 -0.130702 1.04767 0.392105C0.522196 0.914872 0.522196 1.76312 1.04767 2.28593L16.0954 16L1.049 29.7141C0.523529 30.2369 0.523529 31.0852 1.049 31.6079C1.57448 32.1307 2.42668 32.1307 2.95212 31.6079L18.9654 17.0149C19.2455 16.7362 19.3656 16.3668 19.3469 16.0014C19.3643 15.6346 19.2443 15.2652 18.9641 14.9851Z"
+              fill="#505050" />
+          </svg>
+        </button>
+
+
+
+      </div>
+      <div class="product__info">
+        <h2 class="product__title title">
+          Чизбургер с листьями салата
+        </h2>
+        <div class="star product__awards" data-rateyo-rating="4"></div>
+
+        <p class="product__info-price">
+          160 грн.
+        </p>
+
+        <div class="product__form">
+          <form class="product__buy" action="#">
+            <input class="product__buy-num" type="number" value="1" min="1">
+          </form>
+          <button type="submit" class="product__button button-accent">
+            <svg class="product__buy-btn">
+              <use xlink:href="images/sprite.svg#carticon"></use>
+            </svg>
+            Добавить в корзину
+          </button>
+        </div>
+
+        <h3 class="product__info-text">
+          Доставка и оплата
+        </h3>
+        <ul class="product__info-desc">
+          <li>
+            Минимальная сумма заказа — 160 грн
+          </li>
+          <li>
+            Время доставки заказа — 80-140 мин.
+          </li>
+          <li>
+            Оплата осуществляется только банковской картой.
+          </li>
+          <li>
+            Окончательная сумма заказа формируется после сбора товаров.
+          </li>
+
+        </ul>
+        <a href="#" class="button-secondary product__info-btn">
+          Подробнее
+        </a>
+      </div>
+    </div>
+  </div>
+
+</section>

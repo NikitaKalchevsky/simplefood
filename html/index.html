@@ -1,0 +1,19 @@
+@include('components/parts/_head.html',{
+"pageTitle": "Интернет магазин еды Simple Food"
+})
+
+@include('components/parts/_header.html',{
+"activeclass": "active", "catalog": "catalog.html"
+})
+<main class="main ">
+
+  @include('components/index/_hero-content.html')
+  @include('components/index/_product-hero.html')
+  @include('components/index/_info-delivery.html')
+  @include('components/index/_restaurants.html')
+  @include('components/index/_reviews.html')
+  @include('components/parts/_connect.html')
+</main>
+@include('components/parts/_footer.html')
+@include('components/parts/_footer-bottom.html')
+@include('components/parts/_footer-scripts.html')
